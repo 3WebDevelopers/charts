@@ -1,0 +1,28 @@
+<img ng-src="{{mainImageUrl}}" class="product">
+
+<h1>{{product.name}}</h1>
+
+<p>{{product.description}}</p>
+
+<ul class="product-thumbs">
+  <li ng-repeat="img in product.images">
+    <img ng-src="{{img}}" ng-click="setImage(img)">
+  </li>
+</ul>
+
+<ul class="specs">
+  <li>
+    <span>Property One</span>
+    <dl>
+      <dt>Value</dt>
+      <dd>{{product.prop1}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Property Two</span>
+    <dl>
+      <dt>Values</dt>
+      <dd ng-repeat="value in product.prop2">{{value}}</dd>
+    </dl>
+  </li>
+</ul>

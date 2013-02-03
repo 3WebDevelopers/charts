@@ -1,0 +1,14 @@
+{
+    "id": "product-2", 
+    "images": [
+        "img/products/product-2.0.jpg", 
+        "img/products/product-2.1.jpg", 
+        "img/products/product-2.2.jpg"
+    ], 
+    "name": "Product 2", 
+    "prop1": "1",
+    "prop2": [
+        "prop 2 value 1",
+        "prop 2 value 2"
+    ]
+}
