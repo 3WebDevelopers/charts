@@ -3,22 +3,44 @@
     <div class="span2">
       <!--Sidebar content-->
 
-      Search: <input ng-model="query">
       Sort by:
       <select ng-model="orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="prop1">Prop1</option>
+        <option value="market">Market</option>
+        <option value="pattern">Pattern</option>
       </select>
+      
+			Market:
+      <select ng-model="marketFilter">
+        <option value="">Any</option>
+				<option value="NASDAQ">NASDAQ</option>
+				<option value="NYSE">NYSE</option>
+				<option value="LSE">LSE</option>
+				<option value="MLSE">MLSE</option>
+				<option value="HKEX">HKEX</option>
+				<option value="PAR">PAR</option>
+			</select>
+		
+      Pattern:
+			<select ng-model="patternFilter">
+        <option value="">Any</option>
+				<option value="CLASSIC BUBBA">BUBBA</option>
+				<option value="REVERSE BUBBA">REVERSE BUBBA</option>
+				<option value="SUPPORT">SUPPORT</option>
+				<option value="RESISTANCE">RESISTANCE</option>
+				<option value="CLASSIC ESGI">ESGI</option>
+				<option value="REVERSE ESGI">REVERSE ESGI</option>
+			</select>      
 
     </div>
     <div class="span10">
       <!--Body content-->
 
       <ul class="products">
-        <li ng-repeat="product in products | filter:query | orderBy:orderProp" class="thumbnail">
+        <li ng-repeat="product in products | filter:{market: marketFilter, pattern: patternFilter} |  orderBy:orderProp" class="thumbnail">
           <a href="#/products/{{product.id}}" class="thumb"><img ng-src="{{product.imageUrl}}"></a>
-          <a href="#/products/{{product.id}}">{{product.name}}</a>
-          <p>{{product.snippet}}</p>
+          <p>Market: {{product.market}}</p>
+          <p>Pattern: {{product.pattern}}</p>
+          <p>Date: {{product.date}}</p>
         </li>
       </ul>
 

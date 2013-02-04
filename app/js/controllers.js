@@ -4,7 +4,9 @@
 
 function ProductListCtrl($scope, Product) {
   $scope.products = Product.query();
-  $scope.orderProp = 'prop1';
+  $scope.orderProp = 'market';
+  $scope.marketFilter = '';
+  $scope.patternFilter = '';
 }
 
 //ProductListCtrl.$inject = ['$scope', 'Product'];

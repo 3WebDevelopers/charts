@@ -77,3 +77,12 @@ ul.specs dt {
 h1 {
   border-bottom: 1px solid gray;
 }
+
+#mainviewer { 
+margin-top: 45px;
+}
+
+footer{
+background-color: #aaa;
+height: 129px;
+}

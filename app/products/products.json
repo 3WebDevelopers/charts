@@ -1,16 +1,23 @@
 [
     {
-        "prop1": 2, 
-        "id": "product-1", 
-        "imageUrl": "img/products/product-1.0.jpg", 
-        "name": "Product 1", 
-        "snippet": "Product number one"
+        "id": "aa7b75ed", 
+        "imageUrl": "img/products/resistance.png", 
+        "market": "NYSE",
+        "pattern": "RESISTANCE",
+        "date": "13-01-02"
     }, 
     {
-        "prop1": 1, 
-        "id": "product-2", 
-        "imageUrl": "img/products/product-2.0.jpg", 
-        "name": "Product 2", 
-        "snippet": "Product number two"
+        "id": "f645ec38", 
+        "imageUrl": "img/products/resistance.png", 
+        "market": "HKEX",
+        "pattern": "RESISTANCE",
+        "date": "13-01-02"
+    }, 
+    {
+        "id": "1420611c", 
+        "imageUrl": "img/products/reverse_esgi.png", 
+        "market": "NYSE",
+        "pattern": "REVERSE ESGI",
+        "date": "13-01-02"
     }
 ]
