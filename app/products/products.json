@@ -1,20 +1,20 @@
 [
     {
-        "id": "aa7b75ed", 
+        "id": "test", 
         "imageUrl": "img/products/resistance.png", 
         "market": "NYSE",
         "pattern": "RESISTANCE",
         "date": "13-01-02"
     }, 
     {
-        "id": "f645ec38", 
+        "id": "test", 
         "imageUrl": "img/products/resistance.png", 
         "market": "HKEX",
         "pattern": "RESISTANCE",
         "date": "13-01-02"
     }, 
     {
-        "id": "1420611c", 
+        "id": "test", 
         "imageUrl": "img/products/reverse_esgi.png", 
         "market": "NYSE",
         "pattern": "REVERSE ESGI",

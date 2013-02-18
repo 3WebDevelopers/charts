@@ -1,28 +1,66 @@
-<img ng-src="{{mainImageUrl}}" class="product">
-
-<h1>{{product.name}}</h1>
-
-<p>{{product.description}}</p>
-
-<ul class="product-thumbs">
-  <li ng-repeat="img in product.images">
-    <img ng-src="{{img}}" ng-click="setImage(img)">
-  </li>
-</ul>
+<div id="chartdiv" class="chart"></div>
 
 <ul class="specs">
   <li>
-    <span>Property One</span>
+    <span>Fundamental Data</span>
     <dl>
-      <dt>Value</dt>
-      <dd>{{product.prop1}}</dd>
+      <dt>Market</dt>
+      <dd>{{product.fundamentalData.market}}</dd>
+    </dl>
+    <dl>
+      <dt>Type</dt>
+      <dd>{{product.fundamentalData.type}}</dd>
+    </dl>
+    <dl>
+      <dt>Date</dt>
+      <dd>{{product.fundamentalData.date | date:'medium'}}</dd>
+    </dl>
+    <dl>
+      <dt>Symbol</dt>
+      <dd>{{product.fundamentalData.symbol}}</dd>
+    </dl>
+    <dl>
+      <dt>Name</dt>
+      <dd>{{product.fundamentalData.name}}</dd>
+    </dl>
+    <dl>
+      <dt>Industry</dt>
+      <dd>{{product.fundamentalData.industry}}</dd>
+    </dl>
+    <dl>
+      <dt>Sector</dt>
+      <dd>{{product.fundamentalData.sector}}</dd>
+    </dl>
+    <dl>
+      <dt>PE</dt>
+      <dd>{{product.fundamentalData.pe}}</dd>
+    </dl>
+    <dl>
+      <dt>Liquidity</dt>
+      <dd>{{product.fundamentalData.liquidity}}</dd>
     </dl>
   </li>
   <li>
-    <span>Property Two</span>
+    <span>Legend</span>
     <dl>
-      <dt>Values</dt>
-      <dd ng-repeat="value in product.prop2">{{value}}</dd>
+      <dt>Open</dt>
+      <dd>{{open}}</dd>
     </dl>
+    <dl>
+      <dt>High</dt>
+      <dd>{{high}}</dd>
+    </dl>
+    <dl>
+      <dt>Low</dt>
+      <dd>{{low}}</dd>
+    </dl>
+    <dl>
+      <dt>Close</dt>
+      <dd>{{close}}</dd>
+    </dl>
+    <dl>
+      <dt>Volume</dt>
+      <dd>{{volume}}</dd>
+    </dl>      
   </li>
 </ul>
