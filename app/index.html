@@ -1,8 +1,12 @@
 <!doctype html>
 <html lang="en" ng-app="shop">
 <head>
-<meta charset="utf-8">
-<title>Online Shop</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+<title>Yard Stock Chart Patterns</title>
+<link rel="shortcut icon" type="image/x-icon" href="img/layout/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'>
+
 <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
@@ -10,34 +14,62 @@
 <link rel="stylesheet" href="css/amcharts.css">
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span>
-				</a> <a class="brand" href="#">Yard Charts</a>
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li><a href="#">Home</a></li>
-						<li><a href="#/tutorial">Tutorial</a></li>
-						<li><a href="#/products">Patterns</a></li>
-            <li><a href="#/pricing">Pricing</a></li>
-            <li><a href="#/about">About</a></li>
-					</ul>
-				</div>
-				<!--/.nav-collapse -->
-			</div>
-		</div>
-	</div>
 
-	<div id='mainviewer' ng-view></div>
+<div class="container my-container">
 
-	<hr>
-	<footer>
-		<p>&copy; Company 2013</p>
-	</footer>
-	
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner my-navbar">
+            <div class="container">
+
+                <div class="nav nav-pills pull-right my-nav-login">
+                    <a href="#" class="btn btn-primary btn-small my-login-btn my-btn" id="login_trigger">Login Here</a> or use
+                    <a><img src="img/layout/facebook_login.png" alt="Login with Facebook" title="Login with Facebook"/></a>
+                    <a><img src="img/layout/google_login.png" alt="Login with Google" title="Login with Google"/></a>
+                    <a><img src="img/layout/twitter_login.png" alt="Login with Twitter" title="Login with Twitter"/></a>
+                </div>
+                <a class="brand" href="#"><img src="img/layout/logo.png" alt="Yard Charts" title="Yard Charts" /></a>
+                <div class="clearfix my-header-clr"></div>
+                <a class="btn btn-navbar my-btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav my-menu">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#/tutorial">Tradding Patterns</a></li>
+                        <li><a href="#/products">Implementation Techniques</a></li>
+                        <li><a href="#/pricing">Pricing</a></li>
+                        <li><a href="#/about">Register<hr class="my-hr">Buy Credits</a></li>
+                        <li><a href="#/about">Disclaimers</a></li>
+                        <li><a href="#/about">News & Updates</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <div class="clearfix my-header-clr"></div>
+        </div>
+    </div>
+
+    <div ng-view class="my-no-overflow"></div>
+
+    <footer class="my-footer">
+        <div class="my-footer-nav">
+            <ul>
+                <li><a href="#">The Company</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">How it works</a></li>
+                <li class="last"><a href="#">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="clearfix hidden-desktop my-footer-clr"></div>
+        <p class="copy center">Copyright &copy; 2013<span>|</span> Developed by <a href="http://www.3webdevelopers.com" target="_blank">3 Web Developers</a></p>
+    </footer>
+
+
+</div>
+
 	<!-- default libs -->
 	<script src="lib/angular/angular.js"></script>
 	<script src="js/app.js"></script>
@@ -49,8 +81,28 @@
 
 	<!-- extra libs -->
 	<script src="js/vendor/plugins.js"></script>
-  <script src="js/amcharts/amstock.js"></script>
+    <script src="js/amcharts/amstock.js"></script>
 	<script src="js/amcharts/custom.js"></script>
+
+    <script src="js/vendor/tinybox.js"></script>
+
+    <script type="text/javascript">
+        var login_content = "<div class='my-login-box'>";
+        login_content += "<h2>Login</h2>"
+        login_content += "<form action='' method='post'>";
+        login_content += "<ul>";
+        login_content += "<li><input type='text' class='my-field' placeholder='username' title='Username' /></li>";
+        login_content += "<li><input type='password' class='my-field' placeholder='password' title='Password' /></li>";
+        login_content += "</ul>";
+        login_content += "<div class='clearfix'></div>";
+        login_content += "<a href='#' class='right forget'>Forgot your password?</a><br />"
+        login_content += "<div class='clearfix'></div>";
+        login_content += "<span class='my-field-check'><input type='checkbox'> Remember Me</span><br />"
+        login_content += "<input type='submit' class='btn btn-primary btn-small my-btn ' value='Login' />";
+        login_content += "</form>";
+        login_content += "</div>";
+        T$('login_trigger').onclick = function(){TINY.box.show(login_content,0,0,0,1)}
+    </script>
 
 </body>
 </html>

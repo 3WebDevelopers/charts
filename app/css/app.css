@@ -1,4 +1,447 @@
 /* app css stylesheet */
+
+/* body */
+body {
+    font-size: 12px;
+    font-family: verdana, arial, sans-serif;
+    color: #727272;
+    background: url(../img/layout/body-pattern.png) repeat 0 0;
+}
+/* end body */
+
+/* container */
+.my-container{
+    max-width: 980px; margin: -15px auto 0; padding: 15px 0 0 0;
+    background: url(../img/layout/container.png) repeat-y center 0; box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05); -moz-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05); -webkit-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05); -o-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05);
+}
+/* end container */
+
+/* header */
+.my-navbar{
+    padding-top: 5px;
+    background-color: transparent;
+    background-image: none;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.my-header-clr{
+    border-bottom: 1px dotted #d3d3d3;
+}
+.my-btn{
+    background-color: #32baee;
+    background-image: -ms-linear-gradient(top, #32baee, #0487ba);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#32baee), to(#0487ba));
+    background-image: -webkit-linear-gradient(top, #32baee, #0487ba);
+    background-image: -o-linear-gradient(top, #32baee, #0487ba);
+    background-image: -moz-linear-gradient(top, #32baee, #0487ba);
+    background-image: linear-gradient(top, #32baee, #0487ba);
+    background-repeat: repeat-x;
+    border-color: #0088cc #0088cc #0487ba;
+}
+.my-btn:hover{
+    background-color: #32baee;
+    background-image: -ms-linear-gradient(bottom, #32baee, #0487ba);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#32baee), to(#0487ba));
+    background-image: -webkit-linear-gradient(bottom, #32baee, #0487ba);
+    background-image: -o-linear-gradient(bottom, #32baee, #0487ba);
+    background-image: -moz-linear-gradient(bottom, #32baee, #0487ba);
+    background-image: linear-gradient(bottom, #32baee, #0487ba);
+}
+.my-nav-login{
+    padding-top: 5px;
+}
+.my-login-btn{
+    line-height: 22px !important;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: rgba(0,0,0,0.5) 0px 1px 1px;
+    font-size: 12px;
+}
+/* end header */
+
+/* menu */
+.my-menu{
+    text-align: center;
+    padding: 5px 0 ;
+}
+.my-hr{
+    margin:0;
+}
+.my-menu li{
+    margin: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-shadow: none !important;
+}
+.my-menu a{
+    max-width: 120px;
+    padding-top: 5px !important;
+    height: 32px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #4a4a4a !important;
+    background-repeat: repeat-x;
+    border-color: #0088cc #0088cc #0487ba;
+}
+.my-menu li.active a, .my-menu li a:hover{
+    background-color: #32baee !important;
+    background-image: -ms-linear-gradient(top, #32baee, #0487ba);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#32baee), to(#0487ba));
+    background-image: -webkit-linear-gradient(top, #32baee, #0487ba);
+    background-image: -o-linear-gradient(top, #32baee, #0487ba);
+    background-image: -moz-linear-gradient(top, #32baee, #0487ba);
+    background-image: linear-gradient(top, #32baee, #0487ba);
+    background-repeat: repeat-x;
+    border-color: #0088cc #0088cc #0487ba;
+    color: #ffffff !important;
+}
+.my-btn-navbar{
+    line-height: 22px !important;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: rgba(0,0,0,0.5) 0px 1px 1px;
+    font-size: 14px;
+    background-color: #32baee !important;
+    background-image: -ms-linear-gradient(top, #32baee, #0487ba) !important;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#32baee), to(#0487ba)) !important;
+    background-image: -webkit-linear-gradient(top, #32baee, #0487ba) !important;
+    background-image: -o-linear-gradient(top, #32baee, #0487ba) !important;
+    background-image: -moz-linear-gradient(top, #32baee, #0487ba) !important;
+    background-image: linear-gradient(top, #32baee, #0487ba) !important;
+    background-repeat: repeat-x;
+    border-color: #0088cc #0088cc #0487ba;
+    color: #ffffff !important;
+}
+.my-btn-navbar:hover{
+    background-color: #0487ba !important;
+    background-image: -ms-linear-gradient(top, #32baee, #0487ba) !important;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#32baee), to(#0487ba)) !important;
+    background-image: -webkit-linear-gradient(top, #32baee, #0487ba) !important;
+    background-image: -o-linear-gradient(top, #32baee, #0487ba) !important;
+    background-image: -moz-linear-gradient(top, #32baee, #0487ba) !important;
+    background-image: linear-gradient(top, #32baee, #0487ba) !important;
+    background-repeat: repeat-x;
+    border-color: #0088cc #0088cc #0487ba;
+}
+/* end menu */
+
+/* home page main content*/
+.my-no-overflow{
+    overflow: hidden;
+}
+.my-main-container{
+    background: url(../img/layout/main-content-bg.jpg) no-repeat 0 0; width: 938px; height: 417px; position:relative; overflow: hidden; padding:0 21px;
+}
+.my-hero-unit{
+    background-color: transparent;
+    padding: 20px;
+}
+.my-hero-unit .my-mac{
+    float: left;
+}
+.my-hero-unit .my-heading{
+    width: 400px;
+    float: left;
+    padding: 20px;
+    margin: 30px 0 0 40px;
+    color: #f8f8f8;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: rgba(0,0,0,0.5) 0px 1px 0px;
+}
+.my-hero-unit .my-heading h2{
+    font-size: 56px;
+    line-height: 56px;
+    font-weight: 700;
+}
+.my-hero-unit .my-heading h4{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.my-featured {
+    width: 85%;
+    background: #f1f1f1;
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    margin: 10px auto;
+    position: relative;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.my-featured h4 {
+    font-family: 'Raleway', sans-serif;
+    line-height: 43px;
+    font-size: 17px;
+    color:#4a4a4a;
+    font-weight:400;
+}
+.my-featured h4 strong {
+    color:#00acef;
+    font-weight: 600;
+}
+.my-register-btn{
+    display:inline;
+    float: right;
+}
+/* end home page main content */
+
+/* Footer */
+.my-footer{
+    margin: 40px 10px 0 0;
+    height: auto;
+    background-color: transparent;
+    background: url(../img/layout/footer-border.png) repeat-x 0 0;
+    padding: 18px 20px 18px 10px;
+}
+.my-footer-nav {
+    float: left;
+}
+.my-footer-nav ul {
+    list-style:none;
+    list-style-position: outside;
+}
+.my-footer-nav ul li {
+    float: left;
+    border-right: 1px solid #afaca9;
+    padding:0 10px;
+    font-size: 10px;
+    line-height: 10px;
+}
+.my-footer-nav ul li a {
+    color: #afaca9;
+}
+.my-footer-nav ul li a:hover {
+    color: #878684;
+    text-decoration: none;
+}
+.my-footer-nav ul li.last {
+    border-right: 0;
+}
+.my-footer p.copy {
+    font-size: 10px;
+    color:#afaca9;
+    line-height: 10px;
+    float: right;
+}
+.my-footer p.copy a {
+    font-size: 10px;
+    color:#00acef;
+    line-height: 10px;
+    text-decoration: underline;
+}
+.my-footer p.copy a:hover {
+    text-decoration: none;
+}
+.my-footer p.copy span {
+    padding:0 7px;
+}
+.my-footer-clr{
+    margin-top: 30px;
+}
+/* end Footer */
+
+/* Login Box */
+#tinybox {position:absolute; display:none; padding:10px; background:#fff url(../img/layout/preload.gif) no-repeat 50% 50%; z-index:2000; border: 2px solid #0a7fb5; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; -o-border-radius: 6px;}
+#tinymask {position:absolute; display:none; top:0; left:0; height:100%; width:100%; background:#000; z-index:1500}
+#tinycontent {background:#fff}
+.my-login-box { width: 280px; font-family: 'Raleway', sans-serif;}
+.my-login-box h2{ color:#00acef; font-size: 30px; font-weight: 600; text-shadow: rgba(0,0,0,0.5) 0px 1px 0px;text-align: center; padding-bottom: 5px; }
+.my-login-box input.my-field { float:left; width: 200px; padding:0 8px; height: 34px; line-height: 24px;  border: 1px solid #d3d3d3; font-size: 16px; color:#595959; background: #ededed; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; }
+.my-login-box ul { list-style:none; list-style-position: outside; }
+.my-login-box ul li { float: left; padding:0 2px; font-size: 10px; margin: 5px; }
+.my-login-box input.my-field:hover { border-color: #029cdb; }
+.my-login-box input.my-field_check{ margin-left: 10px; }
+.my-login-box a.forget{ font-size: 14px; padding-right: 30px; float:right}
+.my-login-box .my-field-check {font-size: 12px; float:left; padding: 5px 0 0 30px}
+.my-login-box .my-btn{width: 80%;height: 33px;margin: 10px 0 10px 30px; font-size: 14px;}
+/* end Login Box */
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    .navbar .btn-navbar{
+        display: none;
+    }
+    .nav-collapse, .nav-collapse.collapse {
+        overflow: visible;
+        height: auto;
+        position: relative;
+        display: block;
+    }
+    .nav-collapse .nav > li {
+        display: block;
+        float: left;
+    }
+    .nav-collapse .nav > li > a{
+        font-weight: 500;
+        font-size: 13px;
+        max-width: 100px;
+        padding: 10px 5px;
+    }
+    .my-main-container{
+        width: 900px;
+        height: 300px;
+    }
+    .my-main-container .my-mac{
+        width: 300px;
+    }
+    .my-hero-unit .my-heading{
+        width: 300px;
+        padding: 15px 0 0 0;
+    }
+    .my-hero-unit .my-heading h2{
+        font-size: 42px;
+        line-height: 42px;
+        font-weight: 700;
+    }
+    .my-hero-unit .my-heading h4{
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .my-featured{
+        margin-top: 30px;
+    }
+    .my-featured h4 {
+        font-size: 13px;
+        line-height: 22px;
+    }
+    .my-register-btn{
+        font-size: 12px;
+        padding: 10px;
+        float: none;
+        margin-left: 10px;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .my-nav-login{
+        margin-top: 2px !important;
+    }
+    .navbar .btn-navbar {
+        clear: both;
+        float: none;
+    }
+    .navbar .btn-navbar .icon-bar{
+        margin: 2px auto;
+    }
+    .my-menu > li > a{
+        max-width: 100%;
+        height: auto;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+    }
+    .brand img{
+        max-width: 80%;
+    }
+    .my-nav-login .my-btn{
+        padding: 3px 5px;
+        font-size: 11px;
+        line-height: 18px !important;
+    }
+    .my-nav-login img{
+        width: 26px;
+    }
+    .my-main-container{
+        min-width: 600px;
+        max-width: 780px;
+        height: 250px;
+    }
+    .my-main-container .my-mac{
+        width: 230px;
+    }
+    .my-hero-unit .my-heading{
+        width: 250px;
+        padding: 5px 0 0 0;
+    }
+    .my-hero-unit .my-heading h2{
+        font-size: 34px;
+        line-height: 34px;
+        font-weight: 700;
+    }
+    .my-hero-unit .my-heading h4{
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+   .my-featured{
+        width: 90%;
+        margin-top: 20px;
+        text-align: center;
+        padding: 5px;
+    }
+    .my-featured h4 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .my-register-btn{
+        font-size: 12px;
+        padding: 7px;
+        clear: both;
+        float: none;
+        line-height: 40px;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 600px) {
+    .my-main-container .my-mac{
+        width: 200px;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .my-main-container .my-mac{
+        width: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .products {
   list-style: none;
 }
@@ -15,15 +458,6 @@
   clear: both;
   height: 100px;
   padding-top: 15px;
-}
-
-#mainviewer { 
-margin-top: 45px;
-}
-
-footer{
-background-color: #aaa;
-height: 129px;
 }
 
 /** Detail View **/
@@ -49,4 +483,8 @@ ul.specs > li > span{
 ul.specs dt {
   font-weight: bold;
 }
+
+
+
+
 
