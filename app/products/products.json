@@ -1,23 +1,1339 @@
 [
-    {
-        "id": "test", 
-        "imageUrl": "img/products/resistance.png", 
-        "market": "NYSE",
-        "pattern": "RESISTANCE",
-        "date": "13-01-02"
-    }, 
-    {
-        "id": "test", 
-        "imageUrl": "img/products/resistance.png", 
-        "market": "HKEX",
-        "pattern": "RESISTANCE",
-        "date": "13-01-02"
-    }, 
-    {
-        "id": "test", 
-        "imageUrl": "img/products/reverse_esgi.png", 
-        "market": "NYSE",
-        "pattern": "REVERSE ESGI",
-        "date": "13-01-02"
-    }
+  {
+    "id": "0228-REVERSE_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "REVERSE_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0640-REVERSE_ACT_WITHOUT_NET_BRK-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "REVERSE_ACT_WITHOUT_NET_BRK",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0956-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0143-CLASSIC_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0082-CLASSIC_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "CLASSIC_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0341-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0370-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0896-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0291-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "1155-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "1929-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0386-SUPPORT-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0ND7-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "3383-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0EXG-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0NQP-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "1966-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0E3R-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0NUP-RESISTANCE-130208-8",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0HB5-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-10",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-12",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-13",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "84KQ-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-9",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-8",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "0751-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "HKEX",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AG03-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AGQ-RESISTANCE-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "64DE-SUPPORT-130208-11",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AHG-CLASSIC_ONE_DAY_ACT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "CLASSIC_ONE_DAY_ACT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AE01-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AHG-RESISTANCE-130208-10",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AVG-REVERSE_ACT_WITHOUT_NET_BRK-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_ACT_WITHOUT_NET_BRK",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "61MP-SUPPORT-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "ARG-REVERSE_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AVGR-SUPPORT-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "BRIC-SUPPORT-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AIM1-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AW10-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "BPTY-REVERSE_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "BUMI-RESISTANCE-130208-9",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CRWN-REVERSE_ACT_WITHOUT_NET_BRK-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_ACT_WITHOUT_NET_BRK",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "BUMI-RESISTANCE-130208-8",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CRWN-REVERSE_ACT_WITHOUT_NET_BRK-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_ACT_WITHOUT_NET_BRK",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "E1700-RESISTANCE-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CRWN-REVERSE_ACT_WITHOUT_NET_BRK-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_ACT_WITHOUT_NET_BRK",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "EGXU-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "EOAIM-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "EST-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "FIGOV01-REVERSE_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "FRX1-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "DIA-REVERSE_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "GDG-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "HEFT-SUPPORT-130208-9",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "FTFC-CLASSIC_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "GPE-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "GPSSG239-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "HIBU-CLASSIC_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "HMEF-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "DIA-REVERSE_BUBBA-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "IBM-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "HVN-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "IDVY-SUPPORT-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "IKA-RESISTANCE-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "IMEU-SUPPORT-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "LCG-RESISTANCE-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "KMG-CLASSIC_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "CLASSIC_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "JIIS-SUPPORT-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "MEDG-SUPPORT-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "EMMV-SUPPORT-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "NMX6570-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "NII-SUPPORT-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "PJF-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "NSI-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "LCG-RESISTANCE-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SGM-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "RIOL-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SGM-RESISTANCE-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "RUSS-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SGM-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SGM-RESISTANCE-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SGM-RESISTANCE-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SIE-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SPSM-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SWCHN-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TLDH-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TAST-REVERSE_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "STM-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "VSA-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TRK-RESISTANCE-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "VSA-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "VSA-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SRDX-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "UBFO-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SSFN-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "KEYW-SUPPORT-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "RFMD-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "PTNT-CLASSIC_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "LKQ-CLASSIC_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "KIRK-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "LTRX-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "GRVY-CLASSIC_RACB_ON_ACT_DAY-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "CLASSIC_RACB_ON_ACT_DAY",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "USATZ-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "DYAX-SUPPORT-130208-8",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "ASR-SUPPORT-130208-10",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "DHIL-REVERSE_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "REVERSE_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "MSON-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CSCD-SUPPORT-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "QLTY-RESISTANCE-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AMKR-SUPPORT-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SNAK-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "XMRD-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "BBGI-RESISTANCE-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "XWSH-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "WHX-RESISTANCE-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "WITUR-SUPPORT-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "XIN43000-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "XCX4-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "WEB-CLASSIC_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TX-REVERSE_BUBBA-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "REVERSE_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "WCG-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TEVA-CLASSIC_BUBBA-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "SSD-SUPPORT-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TEO-SUPPORT-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "RRMS-REVERSE_BUBBA-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "REVERSE_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "PVA-RESISTANCE-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "RDY-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "OPY-CLASSIC_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "NTT-RESISTANCE-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "NTT-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "GLF-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "MXE-SUPPORT-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "HJL-SUPPORT-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "JOE-SUPPORT-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "JBK-SUPPORT-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "IBN-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "ICA-SUPPORT-130208-8",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "FRF-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "BAS-RESISTANCE-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CNL-RESISTANCE-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CLNY-SUPPORT-130208-9",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "AZO-RESISTANCE-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "MOTR-RESISTANCE-130208-7",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "LKQ-CLASSIC_BUBBA-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "PLMT-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "FLIR-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "EA-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "ENI-SUPPORT-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "MLSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CBF-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "EMII-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "MLSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "XMWO-SUPPORT-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "XMEM-SUPPORT-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "XIN49000-RESISTANCE-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "WITUR-SUPPORT-130208-8",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TMC-REVERSE_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "LSE",
+    "type": "REVERSE_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "ALIMO-RESISTANCE-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "PAR",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TX-REVERSE_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "REVERSE_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TEVA-CLASSIC_BUBBA-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TEVA-CLASSIC_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "RRMS-REVERSE_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "REVERSE_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "RNE-REVERSE_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "REVERSE_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "RES-RESISTANCE-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "PUK-REVERSE_NON_ACTIVE_NET_BRK-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "REVERSE_NON_ACTIVE_NET_BRK",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "ORB-RESISTANCE-130208-3",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "MPV-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "NMT-D-RESISTANCE-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "KEP-SUPPORT-130208-5",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "LG-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "JKS-CLASSIC_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "CLASSIC_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "JEF-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "ISH-REVERSE_ESGI-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "REVERSE_ESGI",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "IGT-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CX-SUPPORT-130208-6",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CXW-SUPPORT-130208-8",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CJES-CLASSIC_BUBBA-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "BPO-SUPPORT-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "CJES-CLASSIC_BUBBA-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NYSE",
+    "type": "CLASSIC_BUBBA",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TSBK-SUPPORT-130208-8",
+    "imageUrl": "img/products/resistance.png",
+    "market": "NASDAQ",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "GENP-RESISTANCE-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "PAR",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "MUN-SUPPORT-130208-1",
+    "imageUrl": "img/products/resistance.png",
+    "market": "PAR",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "ALIVT-RESISTANCE-130208-0",
+    "imageUrl": "img/products/resistance.png",
+    "market": "PAR",
+    "type": "RESISTANCE",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "TES-SUPPORT-130208-2",
+    "imageUrl": "img/products/resistance.png",
+    "market": "PAR",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  },
+  {
+    "id": "LACR-SUPPORT-130208-4",
+    "imageUrl": "img/products/resistance.png",
+    "market": "PAR",
+    "type": "SUPPORT",
+    "date": "2013-02-08T00:00:00.000Z"
+  }
 ]

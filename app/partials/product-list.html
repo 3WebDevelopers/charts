@@ -21,7 +21,7 @@
 			</select>
 		
       Pattern:
-			<select ng-model="patternFilter">
+			<select ng-model="typeFilter">
         <option value="">Any</option>
 				<option value="CLASSIC BUBBA">BUBBA</option>
 				<option value="REVERSE BUBBA">REVERSE BUBBA</option>
@@ -36,10 +36,10 @@
       <!--Body content-->
 
       <ul class="products">
-        <li ng-repeat="product in products | filter:{market: marketFilter, pattern: patternFilter} |  orderBy:orderProp" class="thumbnail">
+        <li ng-repeat="product in products | filter:{market: marketFilter, type: typeFilter} |  orderBy:orderProp" class="thumbnail">
           <a href="#/products/{{product.id}}" class="thumb"><img ng-src="{{product.imageUrl}}"></a>
           <p>Market: {{product.market}}</p>
-          <p>Pattern: {{product.pattern}}</p>
+          <p>Type: {{product.type}}</p>
           <p>Date: {{product.date}}</p>
         </li>
       </ul>
