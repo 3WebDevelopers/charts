@@ -194,6 +194,10 @@ body {
     display:inline;
     float: right;
 }
+.my-featured-span{
+    float: none;
+    margin: 0;
+}
 /* end home page main content */
 
 /* Footer */
@@ -312,16 +316,23 @@ body {
     }
     .my-featured{
         margin-top: 30px;
+        text-align: center;
+        padding: 8px;
     }
     .my-featured h4 {
-        font-size: 13px;
+        text-align: center;
+        font-size: 14px;
         line-height: 22px;
     }
     .my-register-btn{
         font-size: 12px;
         padding: 10px;
+        clear: both;
         float: none;
-        margin-left: 10px;
+        line-height: 40px;
+    }
+    .my-featured-span{
+        max-width: 100%;
     }
 }
 
@@ -383,7 +394,7 @@ body {
         padding: 5px;
     }
     .my-featured h4 {
-        font-size: 12px;
+        font-size: 13px;
         line-height: 16px;
     }
     .my-register-btn{
@@ -393,20 +404,112 @@ body {
         float: none;
         line-height: 40px;
     }
+    .my-featured-span{
+        max-width: 100%;
+    }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 600px) {
+    .brand img{
+        max-width: 150px;
+    }
+    .my-hero-unit{
+        padding: 5px;
+    }
+    .my-main-container{
+        padding: 10px !important;
+        min-width: 480px !important;
+        max-width: 640px !important;
+        height: 180px;
+    }
     .my-main-container .my-mac{
         width: 200px;
+    }
+    .my-hero-unit .my-heading{
+        width: 220px;
+        padding: 5px 0 0 0;
+        margin: 20px 0 0 20px;
+    }
+    .my-hero-unit .my-heading h2{
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+    .my-hero-unit .my-heading h4{
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .my-featured-span{
+        max-width: 100%;
+    }
+    .my-footer{
+        margin: 15px 0;
+        padding: 15px 0;
+        height: auto;
+        font-size: 10px;
+    }
+    .my-footer-nav ul li {
+        float: left;
+        border-right: 1px solid #afaca9;
+        padding:0 5px;
+        font-size: 9px;
+        line-height: 9px;
+    }
+    .my-footer p.copy, .my-footer p.copy a {
+        font-size: 9px;
+        line-height: 9px;
+        padding-right: 5px;
     }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-    .my-main-container .my-mac{
-        width: 150px;
+    .my-nav-login{
+        position: absolute;
+
     }
+    .brand, .brand img{
+        max-width: 250px !important;
+        margin: 0 auto !important;
+        float: none !important;
+        line-height: 10px;
+        padding-bottom: 0 !important;
+    }
+    .my-hero-unit{
+        width: auto !important;
+        margin: 0 auto;
+        min-width: 240px !important;
+        max-width: 480px !important;
+        text-align: center;
+    }
+    .my-main-container{
+        width: auto !important;
+        min-width: 260px !important;
+        max-width: 480px !important;
+        margin: 0 auto !important;
+        height: auto;
+    }
+    .my-main-container .my-mac{
+        width: 200px !important;
+        float: none;
+    }
+    .my-heading{
+        width: auto !important;
+        max-width: 280px !important;
+        text-align: center;
+        margin:0 auto !important;
+        clear:both;
+        float:none !important;
+    }
+    .my-footer ul li{
+        line-height: 14px;
+    }
+    .my-footer p.copy{
+        padding-top: 10px;
+    }
+
 }
 
 
@@ -483,8 +586,3 @@ ul.specs > li > span{
 ul.specs dt {
   font-weight: bold;
 }
-
-
-
-
-
