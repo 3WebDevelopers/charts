@@ -23,7 +23,7 @@
 
                 <a class="brand" href="#"><img src="img/layout/logo.png" alt="Yard Charts" title="Yard Charts" /></a>
                 <div class="nav nav-pills pull-right my-nav-login">
-                    <a href="#" class="btn btn-primary btn-small my-login-btn my-btn" id="login_trigger">Login Here</a> or use
+                    <a href="#loginForm" class="btn btn-primary btn-small my-login-btn my-btn" data-toggle="modal">Login Here</a> or use
                     <a><img src="img/layout/facebook_login.png" alt="Login with Facebook" title="Login with Facebook"/></a>
                     <a><img src="img/layout/google_login.png" alt="Login with Google" title="Login with Google"/></a>
                     <a><img src="img/layout/twitter_login.png" alt="Login with Twitter" title="Login with Twitter"/></a>
@@ -67,8 +67,12 @@
         <p class="copy center">Copyright &copy; 2013<span>|</span> Developed by <a href="http://www.3webdevelopers.com" target="_blank">3 Web Developers</a></p>
     </footer>
 
-
 </div>
+
+<div ng-controller="LoginCtrl">
+    <div class="modal hide fade" ng-include="'partials/login-form.html'" id="loginForm"></div>
+</div>
+
 
 	<!-- default libs -->
 	<script src="lib/angular/angular.js"></script>
@@ -83,26 +87,6 @@
 	<script src="js/vendor/plugins.js"></script>
     <script src="js/amcharts/amstock.js"></script>
 	<script src="js/amcharts/custom.js"></script>
-
-    <script src="js/vendor/tinybox.js"></script>
-
-    <script type="text/javascript">
-        var login_content = "<div class='my-login-box'>";
-        login_content += "<h2>Login</h2>"
-        login_content += "<form action='' method='post'>";
-        login_content += "<ul>";
-        login_content += "<li><input type='text' class='my-field' placeholder='username' title='Username' /></li>";
-        login_content += "<li><input type='password' class='my-field' placeholder='password' title='Password' /></li>";
-        login_content += "</ul>";
-        login_content += "<div class='clearfix'></div>";
-        login_content += "<a href='#' class='right forget'>Forgot your password?</a><br />"
-        login_content += "<div class='clearfix'></div>";
-        login_content += "<span class='my-field-check'><input type='checkbox'> Remember Me</span><br />"
-        login_content += "<input type='submit' class='btn btn-primary btn-small my-btn ' value='Login' />";
-        login_content += "</form>";
-        login_content += "</div>";
-        T$('login_trigger').onclick = function(){TINY.box.show(login_content,0,0,0,1)}
-    </script>
 
 </body>
 </html>

@@ -53,3 +53,5 @@ function NotfoundCtrl($scope){
 	$scope.request = window.location.hash;
 }
 
+function LoginCtrl($scope) {
+}
