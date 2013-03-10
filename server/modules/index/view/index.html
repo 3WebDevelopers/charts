@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="shop">
+<head>
+<meta charset="utf-8">
+<title>3WD Py View</title>
+<style>
+	#main{
+		border: 1px solid black;
+		width: 600px;
+		min-height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: lightgreen;
+	}
+</style>
+</head>
+<body>
+<div id='main'>
+	{{ greetings }}
+	<ul>		
+		<li><a href='/auth/register'>Register Users</a></li>
+		<li><a href='/auth/login'>Login Users</a></li>
+		<li><a href='/auth/logout'>Logout</a></li>
+		<br>
+ 		<li><a href='/user'>List Users</a></li>
+		<li><a href='/user/delete'>** URL for testing only *** Delete Users</a></li>
+		<br>
+		<li><a href='/product/main'>**URL for testing only *** Product Main Menu</a></li><br>
+		
+	</ul>	
+</div>
+</body>
+</html>

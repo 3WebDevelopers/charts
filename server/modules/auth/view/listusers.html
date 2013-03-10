@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="shop">
+<head>
+<meta charset="utf-8">
+<title>3WD Py View</title>
+<style>
+	#main{
+		border: 1px solid black;
+		width: 1000px;
+		min-height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: cyan;
+	}
+	tr:nth-child(1){
+		font-weight: bold;
+	}
+	*{
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<div id='main'>
+	 <table border='1'>
+	 	<tr>
+	 		<td>Register Date</td>
+	 		<td>Email</td>
+	 		<td>Password</td>
+	 	</tr>	 
+	 	{% for user in user_list %}
+	 	<tr>
+	 		<td>{{user.date}}</td>
+	 		<td>{{user.email}}</td>
+	 		<td>{{user.password}}</td>
+	 	</tr>
+	 	{% endfor %}
+	 </table>
+</div>
+<a href='/'>Voltar ao inicio.</a>
+</body>
+</html>

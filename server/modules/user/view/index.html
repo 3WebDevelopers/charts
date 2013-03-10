@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="shop">
+<head>
+<meta charset="utf-8">
+<title>3WD Py View</title>
+<style>
+	#main{
+		border: 1px solid black;
+		width: 100%;
+		padding: 10px;
+		min-height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: lightgreen;
+	}
+</style>
+</head>
+<body>
+<div id='main'>
+	Not working! <br> yet...
+	{{ greetings }}
+	{{ size }}
+<table border='1'>
+	<tr>
+		<th>Email</th>
+ 		<th>Date</th>
+	</tr>
+	{% for row in user_list %}
+	<tr>
+		<td>{{row.email}}</td>
+		
+		<td>{{row.date}}</td>
+	</tr>
+	{% endfor %}
+</table>
+<a href='/'>Voltar ao inicio.</a>
+
+</div>
+</body>
+</html>

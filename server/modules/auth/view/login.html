@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="shop">
+<head>
+<meta charset="utf-8">
+<title>3WD Py View</title>
+<style>
+	#main{
+		border: 1px solid black;
+		width: 1000px;
+		min-height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: cyan;
+	}
+	tr:nth-child(1){
+		font-weight: bold;
+	}
+	*{
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<div id='main'>
+	{{ greetings }}
+	<br>
+	{{special}}
+	<br><br>
+	<b>Login:</b><br>
+	<form method='post' action='/auth/login'>
+		<input name='email' type='text' value='naia.luis@gmail.com'/>
+		<input name='password' type='password' value='123'/>	
+		<input type='submit' value='submeter'/>
+	</form>
+ 
+</div>
+<a href='/'>Voltar ao inicio.</a>
+</body>
+</html>
