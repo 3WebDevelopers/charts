@@ -34,15 +34,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <div class="nav-collapse collapse">
+                <div class="nav-collapse collapse" ng-controller="MainMenuCtrl">
                     <ul class="nav my-menu">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#/tutorial">Tradding Patterns</a></li>
-                        <li><a href="#/products">Implementation Techniques</a></li>
-                        <li><a href="#/pricing">Pricing</a></li>
-                        <li><a href="#/about">Register<hr class="my-hr">Buy Credits</a></li>
-                        <li><a href="#/about">Disclaimers</a></li>
-                        <li><a href="#/about">News & Updates</a></li>
+                        <li ng-class="isActiveBtn('home')"><a href="#" ng-click="switchBtn('home')">Home</a></li>
+                        <li ng-class="isActiveBtn('products')"><a href="#/products" ng-click="switchBtn('products')">Tradding Patterns</a></li>
+                        <li ng-class="isActiveBtn('tutorial')"><a href="#/tutorial" ng-click="switchBtn('tutorial')">Implementation Techniques</a></li>
+                        <li ng-class="isActiveBtn('pricing')"><a href="#/pricing" ng-click="switchBtn('pricing')">Pricing</a></li>
+                        <li ng-class="isActiveBtn('register')"><a href="#/about" ng-click="switchBtn('register')">Register<hr class="my-hr">Buy Credits</a></li>
+                        <li ng-class="isActiveBtn('disclaimers')"><a href="#/about" ng-click="switchBtn('disclaimers')">Disclaimers</a></li>
+                        <li ng-class="isActiveBtn('news')"><a href="#/about" ng-click="switchBtn('news')">News & Updates</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->

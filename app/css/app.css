@@ -146,6 +146,7 @@ body {
 }
 .my-main-container{
     background: url(../img/layout/main-content-bg.jpg) no-repeat 0 0; width: 938px; height: 417px; position:relative; overflow: hidden; padding:0 21px;
+
 }
 .my-hero-unit{
     background-color: transparent;
@@ -274,6 +275,90 @@ body {
 .my-login-box .my-btn{width: 80%;height: 33px;margin: 10px 0 10px 30px; font-size: 14px;}
 /* end Login Box */
 
+.text-align-center{
+    text-align: center;
+}
+.my-h2-header{
+    margin:10px;
+    color: #f8f8f8;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: rgba(0,0,0,0.5) 0px 1px 0px;
+}
+.my-btn-group{
+    width: 750px;
+    margin: 5px auto;
+}
+.my-tut-content{
+    width: 70%;
+    margin: 15px auto;
+    font-family: 'Raleway', sans-serif;
+}
+.my-tut-content img{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width: 260px;
+}
+.my-tut-descr{
+    margin: 0 20px;
+    color: #f8f8f8;
+}
+.my-pricing-row{
+    color: #f8f8f8;
+    width: 600px;
+    margin:10px auto;
+}
+.my-pricing-row p{
+    line-height: 10px;
+}
+.my-pricing-row h4{
+    margin: 5px 0;
+    text-decoration: underline;
+}
+.my-tutorial-container{
+    margin: 10px 50px;
+    text-align: justify;
+    width: auto;
+}
+.my-tutorial-container h1{
+    color: #00acef !important;
+    font-family: 'Raleway', sans-serif !important;
+    text-shadow: rgba(0,0,0,0.5) 0px 1px 0px;
+    font-size:30px;
+    margin-bottom: 20px;
+}
+.my-tutorial-container p{
+    font-family: 'Raleway', sans-serif !important;
+    color: #555555;
+    font-size: 16px;
+    line-height: 20px;
+}
+.my-tutorial-container li{
+    font-family: 'Raleway', sans-serif !important;
+    color: #555555;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.my-definition{
+    text-decoration: underline;
+}
+.my-tutorial-img{
+    max-width: 350px;
+    margin:20px 0 20px 30px;
+    border: 1px #555555 dashed;
+}
+.my-tutorial-img p{
+    margin-top:5px;
+}
+.my-patterns{
+    max-width: 600px;
+    margin: 20px auto;
+}
+.my-back-to-patterns{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: right;
+}
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
@@ -297,7 +382,7 @@ body {
         padding: 10px 5px;
     }
     .my-main-container{
-        width: 900px;
+        width: auto;
         height: 300px;
     }
     .my-main-container .my-mac{

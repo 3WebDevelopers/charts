@@ -1,0 +1,23 @@
+<div class="container my-main-container" style="height:auto;" ng-controller="TutorialMenuCtrl">
+
+    <h2 class="my-h2-header text-align-center">Implementation Techniques Tutorial</h2>
+
+    <div class="btn-group my-btn-group">
+        <button class="btn {{isActiveBtn(btn.name)}}" ng-repeat="btn in applicationButtons" ng-click="switchBtn(btn.name,btn.ref,btn.imgurl)">
+           {{btn.name}}
+        </button>
+    </div>
+
+    <div class="my-tut-content" >
+        <a href="#/{{selectedUrl}}"><img ng-src="{{selectedImgUrl}}" class="pull-left"></a>
+        <div class="my-tut-descr pull-left text-align-center">
+            <h3>{{selectedBtn}}</h3>
+            <br>
+            <h4>Click on the image to access this pattern tutorial</h4>
+            <br>
+            <h5>Or choose a different pattern</h5>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+</div>
