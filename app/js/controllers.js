@@ -62,38 +62,64 @@ function TutorialCtrl($scope){
 function PricingCtrl($scope){
 }
 
-function TutorialBSTCtrl($scope){
+function TutorialBRTCtrl($scope){
 }
 
-function TutorialTSTCtrl($scope){
+function TutorialTRTCtrl($scope){
+}
+
+function TutorialBESCtrl($scope){
+}
+
+function TutorialTESCtrl($scope){
+}
+
+function TutorialTRCtrl($scope){
+}
+
+function TutorialBRCtrl($scope){
+}
+
+function TutorialSUPCtrl($scope){
+}
+
+function TutorialRESCtrl($scope){
 }
 
 function TutorialMenuCtrl($scope){
     $scope.applicationButtons = [
         {
-            "name":     "Bottom Square Triangle",
-            "ref":      "tutorial/bottom-square-triangle",
-            "imgurl":   "img/tutorial/example.png"},
+            "name":     "Bottom Right Triangle",
+            "ref":      "tutorial/bottom-right-triangle",
+            "imgurl":   "img/tutorial/bottom_square_triangle_exampleA.png"},
         {
-            "name": "Top Square Triangle",
-            "ref":  "tutorial/top-square-triangle",
-            "imgurl":   "img/tutorial/example.png"},
+            "name": "Top Right Triangle",
+            "ref":  "tutorial/top-right-triangle",
+            "imgurl":   "img/tutorial/top_square_triangle_exampleA.png"},
         {
             "name": "Bottom End Sweep",
             "ref":  "tutorial/bottom-end-sweep",
-            "imgurl":   "img/tutorial/example.png"},
+            "imgurl":   "img/layout/under-construction.png"},
         {
             "name": "Top End Sweep",
             "ref":  "tutorial/top-end-sweep",
-            "imgurl":   "img/tutorial/example.png"},
+            "imgurl":   "img/layout/under-construction.png"},
+        {
+            "name": "Top Reversal",
+            "ref":  "tutorial/top-reversal",
+            "imgurl":   "img/layout/under-construction.png"},
+        {
+            "name": "Bottom Reversal",
+            "ref":  "tutorial/bottom-reversal",
+            "imgurl":   "img/layout/under-construction.png"},
         {
             "name": "Support",
             "ref":  "tutorial/support",
-            "imgurl":   "img/tutorial/example.png"},
+            "imgurl":   "img/layout/under-construction.png"},
         {
             "name": "Resistance",
             "ref":  "tutorial/resistance",
-            "imgurl":   "img/tutorial/example.png"}];
+            "imgurl":   "img/layout/under-construction.png"}];
 
     $scope.switchBtn = function(btn,ref,imgurl) {
         $scope.selectedBtn = btn;
@@ -103,9 +129,9 @@ function TutorialMenuCtrl($scope){
     $scope.isActiveBtn = function(value) {
         return value === $scope.selectedBtn ? 'active' : '';
     }
-    $scope.selectedBtn = "Bottom Square Triangle";
-    $scope.selectedUrl = "tutorial/bottom-square-triangle";
-    $scope.selectedImgUrl = "img/tutorial/example.png";
+    $scope.selectedBtn = "Bottom Right Triangle";
+    $scope.selectedUrl = "tutorial/bottom-right-triangle";
+    $scope.selectedImgUrl = "img/tutorial/bottom_square_triangle_exampleA.png";
 }
 
 function MainMenuCtrl($scope){

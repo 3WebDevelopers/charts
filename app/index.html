@@ -15,46 +15,49 @@
 </head>
 <body>
 
-<div class="container my-container">
+<div class="my-container">
 
+    <!-- header -->
     <div class="navbar navbar-inverse">
         <div class="navbar-inner my-navbar">
-            <div class="container">
 
-                <a class="brand" href="#"><img src="img/layout/logo.png" alt="Yard Charts" title="Yard Charts" /></a>
-                <div class="nav nav-pills pull-right my-nav-login">
-                    <a href="#loginForm" class="btn btn-primary btn-small my-login-btn my-btn" data-toggle="modal">Login Here</a> or use
-                    <a><img src="img/layout/facebook_login.png" alt="Login with Facebook" title="Login with Facebook"/></a>
-                    <a><img src="img/layout/google_login.png" alt="Login with Google" title="Login with Google"/></a>
-                    <a><img src="img/layout/twitter_login.png" alt="Login with Twitter" title="Login with Twitter"/></a>
-                </div>
-                <div class="clearfix my-header-clr"></div>
-                <a class="btn btn-navbar my-btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <div class="nav-collapse collapse" ng-controller="MainMenuCtrl">
-                    <ul class="nav my-menu">
-                        <li ng-class="isActiveBtn('home')"><a href="#" ng-click="switchBtn('home')">Home</a></li>
-                        <li ng-class="isActiveBtn('products')"><a href="#/products" ng-click="switchBtn('products')">Tradding Patterns</a></li>
-                        <li ng-class="isActiveBtn('tutorial')"><a href="#/tutorial" ng-click="switchBtn('tutorial')">Implementation Techniques</a></li>
-                        <li ng-class="isActiveBtn('pricing')"><a href="#/pricing" ng-click="switchBtn('pricing')">Pricing</a></li>
-                        <li ng-class="isActiveBtn('register')"><a href="#/about" ng-click="switchBtn('register')">Register<hr class="my-hr">Buy Credits</a></li>
-                        <li ng-class="isActiveBtn('disclaimers')"><a href="#/about" ng-click="switchBtn('disclaimers')">Disclaimers</a></li>
-                        <li ng-class="isActiveBtn('news')"><a href="#/about" ng-click="switchBtn('news')">News & Updates</a></li>
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
+            <a class="brand" href="#"><img src="img/layout/logo.png" alt="Yard Charts" title="Yard Charts" /></a>
+            <div class="nav nav-pills pull-right my-nav-login">
+                <a href="#loginForm" class="btn btn-primary btn-small my-login-btn my-btn" data-toggle="modal">Login Here</a> or use
+                <a><img src="img/layout/facebook_login.png" alt="Login with Facebook" title="Login with Facebook"/></a>
+                <a><img src="img/layout/google_login.png" alt="Login with Google" title="Login with Google"/></a>
+                <a><img src="img/layout/twitter_login.png" alt="Login with Twitter" title="Login with Twitter"/></a>
             </div>
             <div class="clearfix my-header-clr"></div>
+            <a class="btn btn-navbar my-btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse collapse my-collapse" ng-controller="MainMenuCtrl">
+                <ul class="nav my-menu">
+                    <li ng-class="isActiveBtn('home')"><a href="#" ng-click="switchBtn('home')" data-toggle="collapse" data-target=".nav-collapse">Home</a></li>
+                    <li ng-class="isActiveBtn('products')"><a href="#/products2" ng-click="switchBtn('products')" data-toggle="collapse" data-target=".nav-collapse">Trading Alarms</a></li>
+                    <li ng-class="isActiveBtn('tutorial')"><a href="#/tutorial" ng-click="switchBtn('tutorial')" data-toggle="collapse" data-target=".nav-collapse">Implementation Techniques</a></li>
+                    <li ng-class="isActiveBtn('pricing')"><a href="#/pricing" ng-click="switchBtn('pricing')" data-toggle="collapse" data-target=".nav-collapse">Pricing</a></li>
+                    <li ng-class="isActiveBtn('register')"><a href="#/about" ng-click="switchBtn('register')" data-toggle="collapse" data-target=".nav-collapse">Register<hr class="my-hr">Buy Credits</a></li>
+                    <li ng-class="isActiveBtn('disclaimers')"><a href="#/about" ng-click="switchBtn('disclaimers')" data-toggle="collapse" data-target=".nav-collapse">Disclaimers</a></li>
+                    <li ng-class="isActiveBtn('news')"><a href="#/about" ng-click="switchBtn('news')" data-toggle="collapse" data-target=".nav-collapse">News & Updates</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
+        <div class="clearfix my-header-clr"></div>
     </div>
+    <!-- end header -->
 
-    <div ng-view class="my-no-overflow"></div>
+    <!-- content -->
+    <div ng-view></div>
+    <!-- end content -->
 
+    <!-- footer -->
     <footer class="my-footer">
-        <div class="my-footer-nav">
+        <div class="my-footer-nav pull-left">
             <ul>
                 <li><a href="#">The Company</a></li>
                 <li><a href="#">Terms & Conditions</a></li>
@@ -63,16 +66,18 @@
                 <li class="last"><a href="#">Contacts</a></li>
             </ul>
         </div>
-        <div class="clearfix hidden-desktop my-footer-clr"></div>
-        <p class="copy center">Copyright &copy; 2013<span>|</span> Developed by <a href="http://www.3webdevelopers.com" target="_blank">3 Web Developers</a></p>
+        <div class="my-copy pull-right">
+            <p class="copy center">Copyright &copy; 2013<span>|</span> Developed by <a href="http://www.3webdevelopers.com" target="_blank">3 Web Developers</a></p>
+        </div>
     </footer>
+    <div class="clearfix"></div>
+    <!-- end footer -->
 
 </div>
 
 <div ng-controller="LoginCtrl">
     <div class="modal hide fade" ng-include="'partials/login-form.html'" id="loginForm"></div>
 </div>
-
 
 	<!-- default libs -->
 	<script src="lib/angular/angular.js"></script>
