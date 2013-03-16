@@ -320,10 +320,11 @@ body {
     margin: 20px 0;
 }
 .my-tutorial-container{
-    margin: 10px 50px;
+    margin: 10px auto;
     text-align: justify;
     width: auto;
     max-width: 1500px;
+    padding: 20px;
 }
 .my-tutorial-container h1{
     color: #00acef !important;
