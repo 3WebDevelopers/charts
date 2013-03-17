@@ -5,8 +5,8 @@
 angular.module('shop', ['shopServices']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-      when('/products', {templateUrl: 'partials/product-list.html',   controller: ProductListCtrl}).
-      when('/products/:productId', {templateUrl: 'partials/product-detail.html', controller: ProductDetailCtrl}).
+      when('/alarms', {templateUrl: 'partials/alarms.html',   controller: AlarmCtrl}).
+      when('/alarms/:key', {templateUrl: 'alarms.html', controller: AlarmCtrl}).
       when('/', {templateUrl: 'partials/homepage.html', controller: HomepageCtrl}).
       when('/notfound', {templateUrl: 'partials/notfound.html', controller: NotfoundCtrl}).
       when('/tutorial', {templateUrl: 'partials/tutorial.html', controller: TutorialCtrl}).

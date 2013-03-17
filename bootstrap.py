@@ -1,6 +1,6 @@
 import webapp2
  
-from api.modules.products import *
+from api.modules.alarms import *
  
 """
 ****************
@@ -48,9 +48,9 @@ Por default acontecem os seguintes:
 """
 
 app = webapp2.WSGIApplication([
-            webapp2.Route(r'/', handler=ProductHandler, name='home'),
+            webapp2.Route(r'/', handler=AlarmHandler, name='home'),
             #Implements REST product handlers   
-            webapp2.Route(r'/products', handler=ProductHandler, name='product-list'),
-            webapp2.Route(r'/products/<product_id>', handler=ProductHandler, name='product')
+            webapp2.Route(r'/alarms', handler=AlarmHandler, name='alarm-list'),
+            webapp2.Route(r'/alarms/<key>', handler=AlarmHandler, name='alarm')
            ], debug=True)
  

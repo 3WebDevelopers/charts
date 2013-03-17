@@ -3,8 +3,8 @@
 /* Services */
 
 angular.module('shopServices', ['ngResource']).
-    factory('Product', function($resource){
-  return $resource('products/:productId', {}, {
+    factory('Alarm', function($resource){
+  return $resource('alarms/:key', {}, {
     query: {method:'GET', isArray:true}
   });
 });

@@ -1,7 +1,10 @@
 //this script should be run from a folder containing the Alarms folder
 //usage: node makeJson.js 
+//note: add server info on line 152
+
 var path = require('path');
 var fs = require('fs');
+var http = require('http');
 
 fs.readdir("./Alarms/", function (err, markets) {
   if(err) {
@@ -26,7 +29,7 @@ fs.readdir("./Alarms/", function (err, markets) {
                                           .replace(/\r/g, "\n").split("\n")[0].split("\t");
                 var fundamentalData = {
                   market:market, 
-                  type: alarmNameArray[1], 
+                  pattern: alarmNameArray[1], 
                   date: new Date(2000 + Number(alarmNameArray[2].slice(0,2)),
                                     Number(alarmNameArray[2].slice(2,4))-1,
                                     Number(alarmNameArray[2].slice(4,6)),
@@ -35,8 +38,7 @@ fs.readdir("./Alarms/", function (err, markets) {
                   name: fundamentalDataArray[1], 
                   industry: fundamentalDataArray[2], 
                   sector: fundamentalDataArray[3], 
-                  pe: fundamentalDataArray[5], 
-                  liquidity: 0 
+                  pe: fundamentalDataArray[5]
                 };
                 product.fundamentalData = fundamentalData;
                
@@ -113,16 +115,16 @@ fs.readdir("./Alarms/", function (err, markets) {
                         product.trendLines = trendLines;
                         
 
-                        
-                        //create json
-                        //console.log(products);
+                        /*
+                        // create json file
+                        // console.log(products);
                         var id = alarm.replace(/\s/g, '');
                         fs.writeFile(path.join("./products", id + ".json"), 
                                     JSON.stringify(product, null, 2), function(err) {
                             if(err) {
                               console.log(err);
                             } else {
-                              //console.log("JSON saved to " + id + ".json");
+                              // console.log("JSON saved to " + id + ".json");
                             }
                         });
                         
@@ -134,15 +136,46 @@ fs.readdir("./Alarms/", function (err, markets) {
                           date: product.fundamentalData.date
                         };
                         
-                        //still need to manually add [] in json
+                        // still need to manually add [] in json
                         fs.appendFile('./products/products.json', 
                                       JSON.stringify(shortProduct, null, 2) + ",\n", function (err) {
                           if(err) {
                             console.log(err);
                           } else {
-                            //console.log("JSON appended to products.json");
+                            // console.log("JSON appended to products.json");
                           }
-                        });                        
+                        });*/ 
+
+                         // send json to server
+                        postData = JSON.stringify(product, null, 2);
+
+                        var options = {
+                          host: 'localhost',
+                          port: 8084,
+                          path: '/alarms',
+                          method: 'POST',
+                          headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'Content-Length': postData.length
+                          }   
+                        };
+
+                        var req = http.request(options, function(res) {
+                          // console.log('STATUS: ' + res.statusCode);
+                          // console.log('HEADERS: ' + JSON.stringify(res.headers));
+                          // res.setEncoding('utf8');
+                          // res.on('data', function (chunk) {
+                            // console.log('BODY: ' + chunk);
+                          // });
+                        });
+
+                        req.on('error', function(e) {
+                          console.log('problem with request: ' + e.message);
+                        });
+
+                        // write data to request body
+                        req.write(postData);
+                        req.end();
                       }
                     });
                   }

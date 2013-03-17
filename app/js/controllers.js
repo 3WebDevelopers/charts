@@ -2,49 +2,48 @@
 
 /* Controllers */
 
-function ProductListCtrl($scope, Product) {
-  $scope.products = Product.query();
-  $scope.orderProp = 'market';
-  $scope.marketFilter = '';
-  $scope.typeFilter = '';
-}
-
-//ProductListCtrl.$inject = ['$scope', 'Product'];
-
-function ProductDetailCtrl($scope, $routeParams, Product) {
-  $scope.product = Product.get({productId: $routeParams.productId}, function(product) {  
-  
-    $scope.open = 0;
-    $scope.high = 0;
-    $scope.low = 0;
-    $scope.close = 0;
-    $scope.volume = 0;
-    
-    product.chartData.forEach(function(val){ 
-      val.date = new Date(val.date); 
-    });
-    product.trendLines.forEach(function(val){ 
-      val.initialDate = new Date(val.initialDate);
-      val.finalDate = new Date(val.finalDate);
-    });
-
-    createChart(product.chartData, product.trendLines, setLegend);
-  });
-  
-  function setLegend (event){
-    if(event.type == "changed" && event.index !== undefined){
-      var candle = event.chart.dataProvider[event.index];
-      $scope.open = candle.open;
-      $scope.high = candle.high;
-      $scope.low = candle.low;
-      $scope.close = candle.close;
-      $scope.volume = candle.volume;
-      $scope.$apply();
+function AlarmCtrl($scope, $routeParams, Alarm) {
+    if ($routeParams.alarmKey){
+        $scope.key = $routeParams.key;
+        loadAlarm();
     }
-  }
-}
 
-//ProductDetailCtrl.$inject = ['$scope', '$routeParams', 'Product'];
+    $scope.alarms = Alarm.query();
+    $scope.filters = {market: '', pattern: '', date: ''}
+    $scope.key = '';
+
+    $scope.loadAlarm = function() {
+        $scope.alarm = Alarm.get({key: $scope.key}, function(alarm) {  
+            $scope.open = 0;
+            $scope.high = 0;
+            $scope.low = 0;
+            $scope.close = 0;
+            $scope.volume = 0;
+
+            alarm.chartData.forEach(function(val){ 
+                val.date = new Date(val.date); 
+            });
+            alarm.trendLines.forEach(function(val){ 
+                val.initialDate = new Date(val.initialDate);
+                val.finalDate = new Date(val.finalDate);
+            });
+
+            createChart(alarm.chartData, alarm.trendLines, $scope.setLegend);
+        });
+    }
+  
+    $scope.setLegend = function (event){
+        if(event.type == "changed" && event.index !== undefined){
+            var candle = event.chart.dataProvider[event.index];
+            $scope.open = candle.open;
+            $scope.high = candle.high;
+            $scope.low = candle.low;
+            $scope.close = candle.close;
+            $scope.volume = candle.volume;
+            $scope.$apply();
+        }
+    }
+}
 
 function HomepageCtrl($scope){
 }

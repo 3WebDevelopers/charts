@@ -1,0 +1,106 @@
+<div class="my-main-container" style="width:auto">   
+      <select ng-model="filters.market">
+        <option value="">Select a market</option>
+        <option value="NASDAQ">NASDAQ</option>
+        <option value="NYSE">NYSE</option>
+        <option value="LSE">LSE</option>
+        <option value="MLSE">MLSE</option>
+        <option value="HKEX">HKEX</option>
+        <option value="PAR">PAR</option>
+    </select>
+		
+    <select ng-model="filters.pattern">
+        <option value="">Select a pattern</option>
+        <option value="CLASSIC BUBBA">BUBBA</option>
+        <option value="REVERSE BUBBA">REVERSE BUBBA</option>
+        <option value="SUPPORT">SUPPORT</option>
+        <option value="RESISTANCE">RESISTANCE</option>
+        <option value="CLASSIC ESGI">ESGI</option>
+        <option value="REVERSE ESGI">REVERSE ESGI</option>
+    </select>      
+      
+    <select ng-model="filters.date">
+        <option value="">Select a date</option>
+        <option value="CLASSIC BUBBA">BUBBA</option>
+        <option value="REVERSE BUBBA">REVERSE BUBBA</option>
+        <option value="SUPPORT">SUPPORT</option>
+        <option value="RESISTANCE">RESISTANCE</option>
+        <option value="CLASSIC ESGI">ESGI</option>
+        <option value="REVERSE ESGI">REVERSE ESGI</option>
+    </select>         
+
+    <select ng-model="key" ng-change="loadAlarm()"
+                ng-options="alarm.key as alarm.symbol for alarm in alarms | filter: filters">
+        <option value="">Select an alarm</option>    
+    </select>          
+    
+    <div id="chartdiv" class="chart"></div>
+
+    <ul class="specs">
+      <li>
+        <span>Fundamental Data</span>
+        <dl>
+          <dt>Market</dt>
+          <dd>{{alarm.fundamentalData.market}}</dd>
+        </dl>
+        <dl>
+          <dt>Type</dt>
+          <dd>{{alarm.fundamentalData.type}}</dd>
+        </dl>
+        <dl>
+          <dt>Date</dt>
+          <dd>{{alarm.fundamentalData.date | date:'medium'}}</dd>
+        </dl>
+        <dl>
+          <dt>Symbol</dt>
+          <dd>{{alarm.fundamentalData.symbol}}</dd>
+        </dl>
+        <dl>
+          <dt>Name</dt>
+          <dd>{{alarm.fundamentalData.name}}</dd>
+        </dl>
+        <dl>
+          <dt>Industry</dt>
+          <dd>{{alarm.fundamentalData.industry}}</dd>
+        </dl>
+        <dl>
+          <dt>Sector</dt>
+          <dd>{{alarm.fundamentalData.sector}}</dd>
+        </dl>
+        <dl>
+          <dt>PE</dt>
+          <dd>{{alarm.fundamentalData.pe}}</dd>
+        </dl>
+        <dl>
+          <dt>Liquidity</dt>
+          <dd>{{alarm.fundamentalData.liquidity}}</dd>
+        </dl>
+      </li>
+      <li>
+        <span>Legend</span>
+        <dl>
+          <dt>Open</dt>
+          <dd>{{open}}</dd>
+        </dl>
+        <dl>
+          <dt>High</dt>
+          <dd>{{high}}</dd>
+        </dl>
+        <dl>
+          <dt>Low</dt>
+          <dd>{{low}}</dd>
+        </dl>
+        <dl>
+          <dt>Close</dt>
+          <dd>{{close}}</dd>
+        </dl>
+        <dl>
+          <dt>Volume</dt>
+          <dd>{{volume}}</dd>
+        </dl>      
+      </li>
+    </ul>
+      
+      
+      
+</div>
