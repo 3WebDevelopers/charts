@@ -2,47 +2,77 @@
 
 /* Controllers */
 
-function AlarmCtrl($scope, $routeParams, Alarm) {
-    if ($routeParams.alarmKey){
-        $scope.key = $routeParams.key;
-        loadAlarm();
-    }
+function AlarmCtrl($scope, $route, $routeParams, $location, $filter, Alarm) {
+    $scope.alarms = Alarm.query(function(){
+            if ($routeParams.key){
+                var alarmList = $filter('filter')($scope.alarms, {key: $routeParams.key});
+                if ( alarmList.length > 0){
+                    $scope.filteredAlarms = $scope.alarms;
+                    $scope.selectedAlarm = alarmList[0];
+                }
+            }
+    });
+    $scope.filters = {market: '', pattern: '', date: ''};
+    $scope.selectedAlarm = '';
+    $scope.filteredAlarms = [];
 
-    $scope.alarms = Alarm.query();
-    $scope.filters = {market: '', pattern: '', date: ''}
-    $scope.key = '';
+    $scope.$watch('selectedAlarm', function(newValue, oldValue) {
+        if (newValue != oldValue && newValue){
+            //$location.path('/alarms/'+$scope.selectedAlarm.key)
+            $scope.alarm = Alarm.get({key: $scope.selectedAlarm.key}, function(alarm) {  
+                $scope.open = 0;
+                $scope.high = 0;
+                $scope.low = 0;
+                $scope.close = 0;
+                $scope.volume = 0;
 
-    $scope.loadAlarm = function() {
-        $scope.alarm = Alarm.get({key: $scope.key}, function(alarm) {  
-            $scope.open = 0;
-            $scope.high = 0;
-            $scope.low = 0;
-            $scope.close = 0;
-            $scope.volume = 0;
+                $scope.alarm.chartData.forEach(function(val){ 
+                    val.date = new Date(val.date); 
+                });
+                $scope.alarm.trendLines.forEach(function(val){ 
+                    val.initialDate = new Date(val.initialDate);
+                    val.finalDate = new Date(val.finalDate);
+                });
 
-            alarm.chartData.forEach(function(val){ 
-                val.date = new Date(val.date); 
+                createChart($scope.alarm.chartData, 
+                                $scope.alarm.trendLines, 
+                                function (event){
+                                    if(event.type == "changed" && event.index !== undefined){
+                                        var candle = event.chart.dataProvider[event.index];
+                                        $scope.open = candle.open;
+                                        $scope.high = candle.high;
+                                        $scope.low = candle.low;
+                                        $scope.close = candle.close;
+                                        $scope.volume = candle.volume;
+                                        $scope.$apply();
+                                    }
+                                });
             });
-            alarm.trendLines.forEach(function(val){ 
-                val.initialDate = new Date(val.initialDate);
-                val.finalDate = new Date(val.finalDate);
-            });
-
-            createChart(alarm.chartData, alarm.trendLines, $scope.setLegend);
-        });
-    }
+        }
+    });
   
-    $scope.setLegend = function (event){
-        if(event.type == "changed" && event.index !== undefined){
-            var candle = event.chart.dataProvider[event.index];
-            $scope.open = candle.open;
-            $scope.high = candle.high;
-            $scope.low = candle.low;
-            $scope.close = candle.close;
-            $scope.volume = candle.volume;
-            $scope.$apply();
+    $scope.$watch('filters', function(newValue, oldValue) {
+        if (newValue != oldValue && newValue){    
+            $scope.filteredAlarms = $filter('filter')($scope.alarms, $scope.filters);
+        }
+    }, true);    
+    
+    $scope.next = function(){
+        if ($scope.filteredAlarms.length > 0){
+            var ind = $scope.filteredAlarms.indexOf($scope.selectedAlarm);
+            if (ind == $scope.filteredAlarms.length - 1) {ind = -1};
+            $scope.selectedAlarm = $scope.filteredAlarms[ind+1];
         }
     }
+    
+    $scope.previous = function(){
+        if ($scope.filteredAlarms.length > 0){
+            var ind = $scope.filteredAlarms.indexOf($scope.selectedAlarm);
+            if (ind == 0 || ind == -1){ind = $scope.filteredAlarms.length}
+            $scope.selectedAlarm = $scope.filteredAlarms[ind-1];
+        }
+    }    
+    
 }
 
 function HomepageCtrl($scope){

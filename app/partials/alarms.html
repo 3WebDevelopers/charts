@@ -1,6 +1,6 @@
 <div class="my-main-container" style="width:auto">   
       <select ng-model="filters.market">
-        <option value="">Select a market</option>
+        <option value="" selected="selected">Select a market</option>
         <option value="NASDAQ">NASDAQ</option>
         <option value="NYSE">NYSE</option>
         <option value="LSE">LSE</option>
@@ -10,7 +10,7 @@
     </select>
 		
     <select ng-model="filters.pattern">
-        <option value="">Select a pattern</option>
+        <option value="" selected="selected">Select a pattern</option>
         <option value="CLASSIC BUBBA">BUBBA</option>
         <option value="REVERSE BUBBA">REVERSE BUBBA</option>
         <option value="SUPPORT">SUPPORT</option>
@@ -20,19 +20,18 @@
     </select>      
       
     <select ng-model="filters.date">
-        <option value="">Select a date</option>
-        <option value="CLASSIC BUBBA">BUBBA</option>
-        <option value="REVERSE BUBBA">REVERSE BUBBA</option>
-        <option value="SUPPORT">SUPPORT</option>
-        <option value="RESISTANCE">RESISTANCE</option>
-        <option value="CLASSIC ESGI">ESGI</option>
-        <option value="REVERSE ESGI">REVERSE ESGI</option>
+        <option value="" selected="selected">Select a date</option>
+        <option value="2013-02-08T00:00:00.000Z">Feb 8, 2013</option>
+        <option value="2013-02-07T00:00:00.000Z">Feb 7, 2013</option>
     </select>         
 
-    <select ng-model="key" ng-change="loadAlarm()"
-                ng-options="alarm.key as alarm.symbol for alarm in alarms | filter: filters">
-        <option value="">Select an alarm</option>    
-    </select>          
+    <select ng-model="selectedAlarm" 
+                ng-options="alarm.symbol for alarm in filteredAlarms">
+        <option value="" selected="selected">Select an alarm</option>    
+    </select> 
+    
+    <button ng-click="next()">next</button>
+    <button ng-click="previous()">previous</button>
     
     <div id="chartdiv" class="chart"></div>
 
@@ -44,8 +43,8 @@
           <dd>{{alarm.fundamentalData.market}}</dd>
         </dl>
         <dl>
-          <dt>Type</dt>
-          <dd>{{alarm.fundamentalData.type}}</dd>
+          <dt>Pattern</dt>
+          <dd>{{alarm.fundamentalData.pattern}}</dd>
         </dl>
         <dl>
           <dt>Date</dt>

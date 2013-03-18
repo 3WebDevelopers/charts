@@ -14,7 +14,7 @@ def json_detail(alarm):
     dict = { 'key': alarm.key.urlsafe(),
                 'fundamentalData': {
                     'market': alarm.market,
-                    'type': alarm.type,
+                    'pattern': alarm.pattern,
                     'date': alarm.date,
                     'symbol': alarm.symbol,
                     'name': alarm.name,

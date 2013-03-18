@@ -20,7 +20,7 @@ class AlarmHandler(webapp2.RequestHandler):
         trendLines = j['trendLines']
         chartData = j['chartData']
         alarm = Alarm(market = fundamentalData['market'],
-                                    type = fundamentalData['type'],
+                                    pattern = fundamentalData['pattern'],
                                     date = fundamentalData['date'],
                                     symbol = fundamentalData['symbol'],
                                     name = fundamentalData['name'],
@@ -36,7 +36,7 @@ class AlarmHandler(webapp2.RequestHandler):
     def get(self, key = None):        
         if key == None:
             alarms = Alarm.query().fetch(projection=[Alarm.market, 
-                                                                            Alarm.type,
+                                                                            Alarm.pattern,
                                                                             Alarm.date,
                                                                             Alarm.symbol])
             self.response.out.write(json_list(alarms))
