@@ -487,6 +487,17 @@ span.title{
 .price-per-package td{
     text-align: center;
 }
+.my-charts-legend .title, .my-charts-fundamental .title{
+    background-color: #32baee;
+    background-image: -ms-linear-gradient(top, #32baee, #0487ba);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#32baee), to(#0487ba));
+    background-image: -webkit-linear-gradient(top, #32baee, #0487ba);
+    background-image: -o-linear-gradient(top, #32baee, #0487ba);
+    background-image: -moz-linear-gradient(top, #32baee, #0487ba);
+    background-image: linear-gradient(top, #32baee, #0487ba);
+    background-repeat: repeat-x;
+    border-color: #0088cc #0088cc #0487ba;
+}
 /* end Main Content
 
 
