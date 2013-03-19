@@ -48,9 +48,8 @@ Por default acontecem os seguintes:
 """
 
 app = webapp2.WSGIApplication([
-            webapp2.Route(r'/', handler=AlarmHandler, name='home'),
             #Implements REST product handlers   
-            webapp2.Route(r'/alarms', handler=AlarmHandler, name='alarm-list'),
-            webapp2.Route(r'/alarms/<key>', handler=AlarmHandler, name='alarm')
+            webapp2.Route(r'/api/alarms', handler=AlarmHandler, name='alarm-list'),
+            webapp2.Route(r'/api/alarms/<key>', handler=AlarmHandler, name='alarm')
            ], debug=True)
  
