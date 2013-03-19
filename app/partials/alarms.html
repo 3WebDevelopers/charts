@@ -2,6 +2,12 @@
 
     <div class="my-charts-filters">
 
+        <select>
+            <option value="" selected="selected">Select an interval</option>
+            <option value="daily">Daily</option>
+            <option value="60m" disabled="disabled">60 minutes (Not yet available)</option>
+            <option value="10m" disabled="disabled">10 minutes (Not yet available)</option>
+        </select>
         <select ng-model="filters.market">
             <option value="" selected="selected">Select a market</option>
             <option value="NASDAQ">NASDAQ</option>
