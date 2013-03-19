@@ -86,36 +86,6 @@ function LoginCtrl($scope) {
 }
 
 function TutorialCtrl($scope){
-}
-
-function PricingCtrl($scope){
-}
-
-function TutorialBRTCtrl($scope){
-}
-
-function TutorialTRTCtrl($scope){
-}
-
-function TutorialBESCtrl($scope){
-}
-
-function TutorialTESCtrl($scope){
-}
-
-function TutorialTRCtrl($scope){
-}
-
-function TutorialBRCtrl($scope){
-}
-
-function TutorialSUPCtrl($scope){
-}
-
-function TutorialRESCtrl($scope){
-}
-
-function TutorialMenuCtrl($scope){
     $scope.applicationButtons = [
         {
             "name":     "Bottom Right Triangle",
@@ -161,6 +131,34 @@ function TutorialMenuCtrl($scope){
     $scope.selectedBtn = "Bottom Right Triangle";
     $scope.selectedUrl = "tutorial/bottom-right-triangle";
     $scope.selectedImgUrl = "img/tutorial/bottom_square_triangle_exampleA.png";
+
+}
+
+function PricingCtrl($scope){
+}
+
+function TutorialBRTCtrl($scope){
+}
+
+function TutorialTRTCtrl($scope){
+}
+
+function TutorialBESCtrl($scope){
+}
+
+function TutorialTESCtrl($scope){
+}
+
+function TutorialTRCtrl($scope){
+}
+
+function TutorialBRCtrl($scope){
+}
+
+function TutorialSUPCtrl($scope){
+}
+
+function TutorialRESCtrl($scope){
 }
 
 function MainMenuCtrl($scope){

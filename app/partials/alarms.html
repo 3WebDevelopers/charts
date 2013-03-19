@@ -1,105 +1,81 @@
-<div class="my-main-container" style="width:auto">   
-      <select ng-model="filters.market">
-        <option value="" selected="selected">Select a market</option>
-        <option value="NASDAQ">NASDAQ</option>
-        <option value="NYSE">NYSE</option>
-        <option value="LSE">LSE</option>
-        <option value="MLSE">MLSE</option>
-        <option value="HKEX">HKEX</option>
-        <option value="PAR">PAR</option>
-    </select>
-		
-    <select ng-model="filters.pattern">
-        <option value="" selected="selected">Select a pattern</option>
-        <option value="CLASSIC BUBBA">BUBBA</option>
-        <option value="REVERSE BUBBA">REVERSE BUBBA</option>
-        <option value="SUPPORT">SUPPORT</option>
-        <option value="RESISTANCE">RESISTANCE</option>
-        <option value="CLASSIC ESGI">ESGI</option>
-        <option value="REVERSE ESGI">REVERSE ESGI</option>
-    </select>      
-      
-    <select ng-model="filters.date">
-        <option value="" selected="selected">Select a date</option>
-        <option value="2013-02-08T00:00:00.000Z">Feb 8, 2013</option>
-        <option value="2013-02-07T00:00:00.000Z">Feb 7, 2013</option>
-    </select>         
+<div class="my-main-container">
 
-    <select ng-model="selectedAlarm" 
-                ng-options="alarm.symbol for alarm in filteredAlarms">
-        <option value="" selected="selected">Select an alarm</option>    
-    </select> 
-    
-    <button ng-click="next()">next</button>
-    <button ng-click="previous()">previous</button>
-    
-    <div id="chartdiv" class="chart"></div>
+    <div class="my-charts-filters">
 
-    <ul class="specs">
-      <li>
-        <span>Fundamental Data</span>
-        <dl>
-          <dt>Market</dt>
-          <dd>{{alarm.fundamentalData.market}}</dd>
-        </dl>
-        <dl>
-          <dt>Pattern</dt>
-          <dd>{{alarm.fundamentalData.pattern}}</dd>
-        </dl>
-        <dl>
-          <dt>Date</dt>
-          <dd>{{alarm.fundamentalData.date | date:'medium'}}</dd>
-        </dl>
-        <dl>
-          <dt>Symbol</dt>
-          <dd>{{alarm.fundamentalData.symbol}}</dd>
-        </dl>
-        <dl>
-          <dt>Name</dt>
-          <dd>{{alarm.fundamentalData.name}}</dd>
-        </dl>
-        <dl>
-          <dt>Industry</dt>
-          <dd>{{alarm.fundamentalData.industry}}</dd>
-        </dl>
-        <dl>
-          <dt>Sector</dt>
-          <dd>{{alarm.fundamentalData.sector}}</dd>
-        </dl>
-        <dl>
-          <dt>PE</dt>
-          <dd>{{alarm.fundamentalData.pe}}</dd>
-        </dl>
-        <dl>
-          <dt>Liquidity</dt>
-          <dd>{{alarm.fundamentalData.liquidity}}</dd>
-        </dl>
-      </li>
-      <li>
-        <span>Legend</span>
-        <dl>
-          <dt>Open</dt>
-          <dd>{{open}}</dd>
-        </dl>
-        <dl>
-          <dt>High</dt>
-          <dd>{{high}}</dd>
-        </dl>
-        <dl>
-          <dt>Low</dt>
-          <dd>{{low}}</dd>
-        </dl>
-        <dl>
-          <dt>Close</dt>
-          <dd>{{close}}</dd>
-        </dl>
-        <dl>
-          <dt>Volume</dt>
-          <dd>{{volume}}</dd>
-        </dl>      
-      </li>
-    </ul>
-      
-      
-      
+        <select ng-model="filters.market">
+            <option value="" selected="selected">Select a market</option>
+            <option value="NASDAQ">NASDAQ</option>
+            <option value="NYSE">NYSE</option>
+            <option value="LSE">LSE</option>
+            <option value="MLSE">MLSE</option>
+            <option value="HKEX">HKEX</option>
+            <option value="PAR">PAR</option>
+        </select>
+
+        <select ng-model="filters.pattern">
+            <option value="" selected="selected">Select a pattern</option>
+            <option value="CLASSIC BUBBA">BUBBA</option>
+            <option value="REVERSE BUBBA">REVERSE BUBBA</option>
+            <option value="SUPPORT">SUPPORT</option>
+            <option value="RESISTANCE">RESISTANCE</option>
+            <option value="CLASSIC ESGI">ESGI</option>
+            <option value="REVERSE ESGI">REVERSE ESGI</option>
+        </select>
+
+        <select ng-model="filters.date">
+            <option value="" selected="selected">Select a date</option>
+            <option value="2013-02-08T00:00:00.000Z">Feb 8, 2013</option>
+            <option value="2013-02-07T00:00:00.000Z">Feb 7, 2013</option>
+        </select>
+
+        <select ng-model="selectedAlarm"
+                    ng-options="alarm.symbol for alarm in filteredAlarms">
+            <option value="" selected="selected">Select an alarm</option>
+        </select>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="my-charts-legend">
+        <div class="pull-left"><span class="title my-btn">Legend</span></div>
+        <div class="pull-left"><span>Open:</span> {{open}}</div>
+        <div class="pull-left"><span>High: </span>{{high}}</div>
+        <div class="pull-left"><span>Low: </span>{{low}}</div>
+        <div class="pull-left"><span>Close: </span>{{close}}</div>
+        <div class="pull-left"><span>Volume: </span>{{volume}}</div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="arrow-wrapper">
+        <div class="pull-left arrow arrow-left">
+            <a ng-click="previous()" class="btn btn-default"><i class="icon-arrow-left"></i></a>
+        </div>
+        <div class="pull-right arrow arrow-right">
+            <a ng-click="next()" class="btn btn-default"><i class="icon-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div>
+        <div id="chartdiv" class="chart">
+            <h1 style="padding: 50px;text-align: center">Please choose a Market, Pattern, Date and Alarm</h1>
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+
+    <div class="my-charts-fundamental">
+        <div class="pull-left"><span class="title my-btn">Fundamental Data</span></div>
+        <div class="pull-left"><span>Symbol:</span> {{alarm.fundamentalData.symbol}}</div>
+        <div class="pull-left"><span>Name: </span>{{alarm.fundamentalData.name}}</div>
+        <div class="pull-left"><span>Industry: </span>{{alarm.fundamentalData.industry}}</div>
+        <div class="pull-left"><span>Sector: </span>{{alarm.fundamentalData.sector}}</div>
+        <div class="pull-left"><span>PE: </span>{{alarm.fundamentalData.pe}}</div>
+        <div class="pull-left"><span>Liquidity: </span>{{alarm.fundamentalData.liquidity}}</div>
+        <div class="clearfix"></div>
+    </div>
 </div>
+<div class="clearfix"></div>

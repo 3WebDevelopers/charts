@@ -368,6 +368,125 @@ body {
 .text-align-center{
     text-align: center;
 }
+
+.my-charts-filters{
+    width: 100%;
+    text-align: center;
+}
+.chart{
+    background-color: #DDDDDD;
+    width: 90%;
+    margin: 0 auto;
+    height: 480px;
+    position: relative;
+}
+.my-charts-legend{
+    text-align: right;
+    width: auto;
+    max-width: 90%;
+    margin: 10px 5% 10px 0;
+    float: right;
+    line-height: 30px;
+}
+.my-charts-legend span{
+    margin: 0 10px;
+    font-weight: 600;
+}
+.arrow{
+    top: 220px;
+    position: relative;
+    z-index: 999;
+}
+.arrow-right{
+    right: 5%;
+}
+.arrow-wrapper{
+    position: absolute;
+    width: 100%;
+}
+.arrow a{
+    width: 30px;
+    margin: 3px;
+}
+span.title{
+    font-size: 14px;
+    background-color: #4a4a4a;
+    color: #FFFFFF;
+    padding: 5px;
+}
+.my-charts-fundamental{
+    text-align: left;
+    width: auto;
+    max-width: 90%;
+    margin: 30px 5px 0 5%;
+    float: left;
+    line-height: 30px;
+}
+.my-charts-fundamental div{
+    margin: 0 10px;
+}
+.my-charts-fundamental span{
+    font-weight: 600;
+}
+.pricing-content{
+    text-align: center;
+    width: 800px;
+    margin: 10px auto;
+    padding: 3px;
+    font-family: 'Raleway', sans-serif;
+    color: #f8f8f8;
+}
+.price-per-view{
+    float: left;
+    padding: 5px;
+    width: 350px;
+}
+.price-per-view h3{
+    text-align: center;
+    margin: 10px;
+    font-size: 24px;
+}
+.price-per-view table{
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #FFFFFF;
+    color: #4a4a4a;
+}
+.price-per-view td{
+    text-align: center;
+}
+.price-per-view table:hover{
+    background-color: #FFFFFF;
+    color: #4a4a4a;
+}
+
+.price-per-package{
+    float: right;
+    padding: 5px;
+    width: 400px;
+}
+.price-per-package h3{
+    text-align: center;
+    margin: 10px;
+    font-size: 24px;
+}
+.price-per-package table{
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #FFFFFF;
+    color: #4a4a4a;
+}
+.price-per-package table:hover{
+    background-color: #FFFFFF;
+    color: #4a4a4a;
+}
+.price-per-package thead td{
+    text-align: center;
+    font-weight: 600;
+}
+.price-per-package td{
+    text-align: center;
+}
 /* end Main Content
 
 
@@ -426,9 +545,9 @@ body {
     }
     .homepage-register{
         width: auto;
-        -moz-border-radius: 0;
         -webkit-border-radius: 0;
-        -o-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
         padding: 10px;
     }
     .homepage-register-text h4{
@@ -460,6 +579,26 @@ body {
     }
     .my-tutorial-img{
         width: 280px;
+    }
+    .pricing-content{
+        width: 100%;
+    }
+    .price-per-view{
+        float: none;
+        width: 400px;
+        margin: -10px auto -20px;
+    }
+    .price-per-view table, .price-per-package table{
+        font-size: 12px;
+    }
+    .price-per-view h3, .price-per-package h3{
+        font-size: 18px;
+    }
+    .price-per-package{
+        float: none;
+        width: 400px;
+        clear: both;
+        margin: 0 auto;
     }
 }
 
@@ -522,9 +661,9 @@ body {
     }
     .homepage-register{
         width: auto;
-        -moz-border-radius: 0;
         -webkit-border-radius: 0;
-        -o-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
         padding: 5px;
     }
     .homepage-register-text, .homepage-register-btn{
@@ -575,6 +714,26 @@ body {
     }
     .my-tutorial-container p{
         font-size: 14px;
+    }
+    .pricing-content{
+        width: 100%;
+    }
+    .price-per-view{
+        float: none;
+        width: 400px;
+        margin: -10px auto -20px;
+    }
+    .price-per-view table, .price-per-package table{
+        font-size: 12px;
+    }
+    .price-per-view h3, .price-per-package h3{
+        font-size: 18px;
+    }
+    .price-per-package{
+        float: none;
+        width: 400px;
+        clear: both;
+        margin: 0 auto;
     }
 }
 
@@ -665,58 +824,10 @@ body {
         text-align: center;
     }
 
-}
+    .price-per-view, .price-per-package{
+        margin-top: -20px;
+        margin-bottom: -20px;
+        width: 280px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-/* old */
-.products {
-    list-style: none;
-}
-
-.thumb {
-    float: left;
-    margin: -1em 1em 1.5em 0em;
-    padding-bottom: 1em;
-    height: 100px;
-    width: 100px;
-}
-
-.products li {
-    clear: both;
-    height: 100px;
-    padding-top: 15px;
-}
-
-/** Detail View **/
-
-ul.specs {
-    clear: both;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-ul.specs > li{
-    display: inline-block;
-    width: 200px;
-    vertical-align: top;
-}
-
-ul.specs > li > span{
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-ul.specs dt {
-    font-weight: bold;
 }
