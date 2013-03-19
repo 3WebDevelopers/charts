@@ -53,7 +53,11 @@ function AlarmCtrl($scope, $route, $routeParams, $location, $filter, Alarm) {
   
     $scope.$watch('filters', function(newValue, oldValue) {
         if (newValue != oldValue && newValue){    
-            $scope.filteredAlarms = $filter('filter')($scope.alarms, $scope.filters);
+            if ($scope.filters.market && $scope.filters.pattern && $scope.filters.date) {
+                $scope.filteredAlarms = $filter('filter')($scope.alarms, $scope.filters);
+            } else {
+                $scope.filteredAlarms = [];
+            }
         }
     }, true);    
     
