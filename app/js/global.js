@@ -1,6 +1,9 @@
 $(function() {
-    setInterval(function(Hash){
+     setInterval(function(Hash){
+		var target = window.location.hash.split('/').slice(0,2).join('/');
         $('.active').removeClass('active');
-        $('li a[href="'+window.location.hash+'"]').parent().addClass('active');
-    },100)
+		if(target == '#/') $('li a[href="'+target+'"]').parent().addClass('active');
+		else $('li a[href^="'+target+'"]').parent().addClass('active');
+    },100) 
 });
+
