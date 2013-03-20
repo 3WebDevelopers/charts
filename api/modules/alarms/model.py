@@ -18,19 +18,3 @@ class Alarm(ndb.Model):
     def get(key):
         return ndb.Key(urlsafe=key).get()
         
-class Market(ndb.Model):
-	name = ndb.StringProperty()
-	index = ndb.IntegerProperty()
-	
-    @staticmethod
-    def get(key):
-        return ndb.Key(urlsafe=key).get()	
-	
-class Pattern(ndb.Model):
-	name = ndb.StringProperty()
-	index = ndb.IntegerProperty()
-	
-    @staticmethod
-    def get(key):
-        return ndb.Key(urlsafe=key).get()	        
-        
