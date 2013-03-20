@@ -76,8 +76,8 @@ class SaveLogin(BaseHandler):
         failmsg = "Bad Login"
         username = self.request.get("user")
         password = self.request.get("pass")
-        if username == "bigodes":
-            if password == "grandes":
+        if username == "yardcharts":
+            if password == "greatday":
                 self.session['login'] = 'simesta'
                 self.redirect('/')
             else:
@@ -103,7 +103,10 @@ class PerformLogout(BaseHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        self.response.write("Main Page")
+        import os
+        from google.appengine.ext.webapp import template
+        path = os.path.join(os.path.dirname(__file__), 'app' + os.sep + 'index.html')
+        self.response.out.write(template.render(path, { 'a':'b'}))
 
 class Hello(BaseHandler):
     def get(self):
