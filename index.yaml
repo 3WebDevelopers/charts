@@ -13,6 +13,14 @@ indexes:
 - kind: Alarm
   properties:
   - name: date
+  - name: interval
+  - name: market
+  - name: pattern
+  - name: symbol
+
+- kind: Alarm
+  properties:
+  - name: date
   - name: market
   - name: pattern
   - name: symbol

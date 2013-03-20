@@ -2,24 +2,27 @@
 
 /* Controllers */
 
-function AlarmCtrl($scope, $route, $routeParams, $location, $filter, Alarm) {
-    $scope.alarms = Alarm.query(function(){
-            if ($routeParams.key){
-                var alarmList = $filter('filter')($scope.alarms, {key: $routeParams.key});
-                if ( alarmList.length > 0){
-                    $scope.filteredAlarms = $scope.alarms;
-                    $scope.selectedAlarm = alarmList[0];
-                }
+function AlarmCtrl($scope, $route, $routeParams, $location, $filter, Alarms, AlarmFilterOptions) {
+    $scope.alarmFilterOptions = AlarmFilterOptions.get();
+    
+    $scope.alarms = Alarms.query(function(){  
+        if ($routeParams.key){
+            var alarmList = $filter('filter')($scope.alarms, {key: $routeParams.key});
+            if ( alarmList.length > 0){
+                $scope.filteredAlarms = $scope.alarms;
+                $scope.selectedAlarm = alarmList[0];
             }
+        }
     });
-    $scope.filters = {market: '', pattern: '', date: ''};
+
+    $scope.filters = {interval: '', market: '', pattern: '', date: ''};
     $scope.selectedAlarm = '';
     $scope.filteredAlarms = [];
 
     $scope.$watch('selectedAlarm', function(newValue, oldValue) {
         if (newValue != oldValue && newValue){
             //$location.path('/alarms/'+$scope.selectedAlarm.key)
-            $scope.alarm = Alarm.get({key: $scope.selectedAlarm.key}, function(alarm) {  
+            $scope.alarm = Alarms.get({key: $scope.selectedAlarm.key}, function(alarm) {  
                 $scope.open = 0;
                 $scope.high = 0;
                 $scope.low = 0;
@@ -53,7 +56,8 @@ function AlarmCtrl($scope, $route, $routeParams, $location, $filter, Alarm) {
   
     $scope.$watch('filters', function(newValue, oldValue) {
         if (newValue != oldValue && newValue){    
-            if ($scope.filters.market && $scope.filters.pattern && $scope.filters.date) {
+            if ($scope.filters.interval && $scope.filters.market && 
+                $scope.filters.pattern && $scope.filters.date) {
                 $scope.filteredAlarms = $filter('filter')($scope.alarms, $scope.filters);
             } else {
                 $scope.filteredAlarms = [];
@@ -142,7 +146,6 @@ function PricingCtrl($scope){
 }
 
 function TutorialBRTCtrl($scope){
-
 }
 
 function TutorialTRTCtrl($scope){

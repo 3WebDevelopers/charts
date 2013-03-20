@@ -3,8 +3,9 @@ from google.appengine.ext import ndb
 class Alarm(ndb.Model):
     market = ndb.StringProperty()
     pattern = ndb.StringProperty()
-    date = ndb.StringProperty()
-    start_date = ndb.StringProperty()
+    interval = ndb.StringProperty()
+    date = ndb.DateTimeProperty()
+    start = ndb.DateTimeProperty()
     symbol = ndb.StringProperty()
     name = ndb.StringProperty()
     industry = ndb.StringProperty()

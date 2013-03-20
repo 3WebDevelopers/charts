@@ -5,26 +5,25 @@ threadsafe: false
 api_version: 1
 
 handlers:
-- url: /api/alarms.*
+- url: /api/.*
   script: bootstrap.app
 
 - url: /css
-  static_dir: app/css
-
+  static_dir: app/css  
+  
 - url: /img
-  static_dir: app/img
-
+  static_dir: app/img  
+  
 - url: /js
-  static_dir: app/js
-
+  static_dir: app/js  
+  
 - url: /lib
-  static_dir: app/lib
-
+  static_dir: app/lib  
+  
 - url: /partials
-  static_dir: app/partials
-
-- url: .*
+  static_dir: app/partials  
+   
+- url: /.*
   script: bootstrap.app
-
 #static_files: app/index.html
-#upload: app/index.html
+#upload: app/index.html  
