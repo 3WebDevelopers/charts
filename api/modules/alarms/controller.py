@@ -1,7 +1,7 @@
 import webapp2, json
 from model import *
 from view import *
-
+from base import *
 import logging
 
 """  
@@ -13,7 +13,7 @@ del     alarm/#       delete, returns bool
 put     alarm/#       update, returns modified alarm
 """
 
-class AlarmHandler(webapp2.RequestHandler):
+class AlarmHandler(BaseHandler):
     def post(self):
         j = json.loads(self.request.body)
         fundamentalData = j['fundamentalData']
