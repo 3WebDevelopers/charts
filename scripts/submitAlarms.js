@@ -13,13 +13,18 @@ var readline = require('readline');
 
 
 // SETTINGS
+// options
 var logProgress = true;
 var logErrors = true;
 var sendData =  false;
 
-var serverInfo = {host: "localhost", port: "8080"};
-
-//name_in_folder : name_in_db
+// server information
+var serverInfo = {host: "localhost", 
+                            port: "8080",
+                            path: '/api/datapoints'};
+                            
+// allowed data
+// name_in_folder : name_in_db
 var allowedPatterns = {
     "CLASSIC_BUBBA": "BOTTOM RIGHT TRIANGLE",
     "REVERSE_BUBBA": "TOP RIGHT TRIANGLE",
@@ -31,7 +36,7 @@ var allowedPatterns = {
     "DOWN_GEAR": "UP GEAR"
 };
 
-//name_in_folder : name_in_db
+// name_in_folder : name_in_db
 var allowedMarkets = {
     "_HKEX": "HKEX",
     "_LSE": "LSE",
@@ -203,7 +208,7 @@ rl.question("CONFIRM? Y/N\n", function(answer) {
 										
 														product.chartData = chartData;
 														product.fundamentalData.liquidity = calcLiquidity(chartData);
-														product.fundamentalData.start = chartData[0].date;
+														product.fundamentalData.start_date = chartData[0].date;
 										
 														//reading trendlines
 														fs.readFile(path.join('./', market, "DBINFO", alarm, 'Disegno.txt'),

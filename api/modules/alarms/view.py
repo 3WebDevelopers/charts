@@ -20,7 +20,8 @@ def json_detail(alarm):
                     'name': alarm.name,
                     'industry': alarm.industry,
                     'sector': alarm.sector,
-                    'pe': alarm.pe},
-                'trendLines':  json.loads(alarm.trendLines),
-                'chartData': json.loads(alarm.chartData)}
+                    'pe': alarm.pe,
+                    'liquidity': alarm.liquidity},
+                'trendLines':  json.loads(alarm.trend_lines),
+                'chartData': json.loads(alarm.chart_data)}
     return json.dumps(dict)

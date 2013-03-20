@@ -13,13 +13,18 @@ var readline = require('readline');
 
 
 // SETTINGS
-var logProgress = false;
+// options
+var logProgress = true;
 var logErrors = true;
-var sendData =  true;
+var sendData =  false;
 
-var serverInfo = {host: "localhost", port: "8080"};
+// server information
+var serverInfo = {host: "localhost", 
+                            port: "8080",
+                            path: '/api/alarms'};
 
-//name_in_folder : name_in_db
+// allowed data
+// name_in_folder : name_in_db
 var allowedMarkets = {
     "BS_HKEX": "HKEX",
     "BS_LSE": "LSE",
@@ -171,7 +176,7 @@ rl.question("CONFIRM? Y/N\n", function(answer) {
                                                             var options = {
                                                                 host: serverInfo.host,
                                                                 port: serverInfo.port,
-                                                                path: '/alarms',
+                                                                path: serverInfo.path,
                                                                 method: 'POST',
                                                                 headers: {
                                                                     'Content-Type': 'application/x-www-form-urlencoded',

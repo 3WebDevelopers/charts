@@ -16,19 +16,21 @@ put     alarm/#       update, returns modified alarm
 class AlarmHandler(webapp2.RequestHandler):
     def post(self):
         j = json.loads(self.request.body)
-        fundamentalData = j['fundamentalData']
-        trendLines = j['trendLines']
-        chartData = j['chartData']
-        alarm = Alarm(market = fundamentalData['market'],
-                                    pattern = fundamentalData['pattern'],
-                                    date = fundamentalData['date'],
-                                    symbol = fundamentalData['symbol'],
-                                    name = fundamentalData['name'],
-                                    industry = fundamentalData['industry'],
-                                    sector = fundamentalData['sector'],
-                                    pe = fundamentalData['pe'],
-                                    trendLines = json.dumps(trendLines),
-                                    chartData = json.dumps(chartData))
+        fundamental_data = j['fundamentalData']
+        trend_lines = j['trendLines']
+        chart_data = j['chartData']
+        alarm = Alarm(market = fundamental_data['market'],
+                                    pattern = fundamental_data['pattern'],
+                                    date = fundamental_data['date'],
+                                    start_date = fundamental_data['start'],
+                                    symbol = fundamental_data['symbol'],
+                                    name = fundamental_data['name'],
+                                    industry = fundamental_data['industry'],
+                                    sector = fundamental_data['sector'],
+                                    pe = fundamental_data['pe'],
+                                    liquidity = fundamental_data['liquidity'],
+                                    trend_lines = json.dumps(trend_lines),
+                                    chart_data = json.dumps(chart_data))
         key = alarm.put()
         # logging.info(repr(j))
         # self.response.out.write(jsonView(p))
@@ -36,9 +38,9 @@ class AlarmHandler(webapp2.RequestHandler):
     def get(self, key = None):        
         if key == None:
             alarms = Alarm.query().fetch(projection=[Alarm.market, 
-                                                                            Alarm.pattern,
-                                                                            Alarm.date,
-                                                                            Alarm.symbol])
+                                                    Alarm.pattern,
+                                                    Alarm.date,
+                                                    Alarm.symbol])
             self.response.out.write(json_list(alarms))
         else:
             p = Alarm.get(key)
