@@ -138,6 +138,7 @@ function PricingCtrl($scope){
 }
 
 function TutorialBRTCtrl($scope){
+
 }
 
 function TutorialTRTCtrl($scope){

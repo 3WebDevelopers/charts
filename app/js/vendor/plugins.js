@@ -22,15 +22,21 @@
 }());
 
 Modernizr.load([
-  {
-    load: '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js',
-    complete: function () {
-      if ( !window.jQuery ) {
+    {
+        load: '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js',
+        complete: function () {
+          if ( !window.jQuery ) {
             Modernizr.load('js/vendor/jquery-1.8.3.min.js');
-      }
+            }
+        }
+    },
+    {
+        load: 'js/vendor/bootstrap.js'
+    },
+    {
+        load: 'js/global.js'
+    },
+    {
+        load: 'js/vendor/jquery.jcarousel.min.js'
     }
-  },
-  {
-    load: 'js/vendor/bootstrap.js',
-  }
 ]);
