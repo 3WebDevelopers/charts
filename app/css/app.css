@@ -4,7 +4,7 @@
 body {
     font-size: 12px;
     font-family: verdana, arial, sans-serif;
-    background: url(../img/layout/body-pattern.png) repeat 0 0;
+    background-color: #555555;
 }
 /* end body */
 
@@ -13,7 +13,6 @@ body {
     width: 95%;
     margin:0 auto;
     background-color: #FFFFFF;
-    box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05); -moz-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05); -webkit-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05); -o-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05);
 }
 /* end container */
 
@@ -143,14 +142,14 @@ body {
 
 /* Footer */
 .my-footer{
-    margin: 40px 10px 0 0;
+    margin: 0;
     height: auto;
-    background-color: transparent;
-    background: url(../img/layout/footer-border.png) repeat-x 0 0;
+    background-color: #555555;
     padding: 18px 20px 18px 10px;
 }
 .my-footer-nav {
     float: left;
+    margin-top: 10px;
 }
 .my-footer-nav ul {
     list-style:none;
@@ -179,6 +178,7 @@ body {
     color:#afaca9;
     line-height: 10px;
     float: right;
+    margin-top:10px;
 }
 .my-footer p.copy a {
     font-size: 10px;
@@ -215,6 +215,10 @@ body {
 
 /* Main Content */
 .my-main-container{
+    background-color: #555555;
+}
+.my-main-container-alarms{
+    background-color: #999999;
 }
 .my-hero-unit{
     width: 100%;
@@ -225,7 +229,7 @@ body {
     background: url(../img/layout/main-content-bg2x.jpg) repeat-x;
 }
 .homepage-content{
-    width: 900px;
+    width: 800px;
     margin:0 auto;
 }
 .homepage-img{
@@ -234,15 +238,20 @@ body {
     padding: 15px;
 }
 .homepage-title{
-    width: 47%;
+    width: auto;
     float: left;
     padding: 10px;
-    margin: 60px 0;
+    margin: 40px 0;
     color: #f8f8f8;
-    font-family: 'Raleway', sans-serif;
+    font-family: Copperplate !important;
     text-shadow: rgba(0,0,0,0.5) 0px 1px 0px;
 }
 .homepage-title h2{
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 700;
+}
+.homepage-title h3{
     font-size: 56px;
     line-height: 56px;
     font-weight: 700;
@@ -258,7 +267,7 @@ body {
     background: #f1f1f1;
     border: 1px solid #e5e5e5;
     padding: 15px;
-    margin: 10px auto;
+    margin: 20px auto 0;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -308,13 +317,19 @@ body {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
+    margin-bottom: 20px;
 }
 .tutorial-content-text{
     width: auto;
-    text-align: center;
+    text-align: left;
     margin:10px;
     padding: 20px;
     float: right;
+}
+.tutorial-content-text h2{
+    color: #555555;
+    font-size: 30px;
+    margin-left: 0;
 }
 .tutorial-content-text h3{
     margin: 20px 0;
@@ -325,6 +340,7 @@ body {
     width: auto;
     max-width: 1500px;
     padding: 20px;
+    background-color: #FFFFFF;
 }
 .my-tutorial-container h1{
     color: #00acef !important;
@@ -368,13 +384,30 @@ body {
 .text-align-center{
     text-align: center;
 }
+.text-align-right{
+    text-align: right;
+}
+.red{
+    color: #FF0000;
+}
+.blue{
+    color: #0055cc;
+}
+.green{
+    color: #32cd32;
+}
+.bold{
+    font-weight: bold;
+}
 
 .my-charts-filters{
     width: 100%;
     text-align: center;
+    padding-top: 20px;
 }
 .chart{
-    background-color: #DDDDDD;
+    background-color: #555555;
+    color: #FFFFFF;
     width: 90%;
     margin: 0 auto;
     height: 480px;
@@ -387,6 +420,11 @@ body {
     margin: 10px 5% 10px 0;
     float: right;
     line-height: 30px;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+.my-charts-legend span{
+    font-weight: 600;
 }
 .my-charts-legend span{
     margin: 0 10px;
@@ -398,11 +436,10 @@ body {
     z-index: 999;
 }
 .arrow-right{
-    right: 5%;
 }
 .arrow-wrapper{
     position: absolute;
-    width: 100%;
+    width: 95%;
 }
 .arrow a{
     width: 30px;
@@ -418,7 +455,7 @@ span.title{
     text-align: left;
     width: auto;
     max-width: 90%;
-    margin: 30px 5px 0 5%;
+    margin: 30px 5px 10px 5%;
     float: left;
     line-height: 30px;
 }
@@ -497,6 +534,11 @@ span.title{
     background-image: linear-gradient(top, #32baee, #0487ba);
     background-repeat: repeat-x;
     border-color: #0088cc #0088cc #0487ba;
+}
+.my-charts-fundamental .value{
+    color: #FFFFFF;
+    background-color: #555555;
+    padding: 5px;
 }
 /* end Main Content
 
@@ -659,6 +701,8 @@ span.title{
     }
     .homepage-title{
         margin: 40px 0;
+        width: auto;
+        text-align: left;
     }
     .homepage-title h2{
         font-size: 40px;

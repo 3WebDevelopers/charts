@@ -1,4 +1,4 @@
-<div class="my-main-container">
+<div class="my-main-container my-main-container-alarms">
     <div class="my-charts-filters">
         <select ng-model="filters.interval">
             <option value="" selected="selected">Select an interval</option>
@@ -27,7 +27,6 @@
     <div class="clearfix"></div>
 
     <div class="my-charts-legend">
-        <div class="pull-left"><span class="title">Legend</span></div>
         <div class="pull-left"><span>Open:</span> {{open}}</div>
         <div class="pull-left"><span>High: </span>{{high}}</div>
         <div class="pull-left"><span>Low: </span>{{low}}</div>
@@ -57,13 +56,12 @@
     <div class="clearfix"></div>
 
     <div class="my-charts-fundamental">
-        <div class="pull-left"><span class="title">Fundamental Data</span></div>
-        <div class="pull-left"><span>Symbol:</span> {{alarm.fundamentalData.symbol}}</div>
-        <div class="pull-left"><span>Name: </span>{{alarm.fundamentalData.name}}</div>
-        <div class="pull-left"><span>Industry: </span>{{alarm.fundamentalData.industry}}</div>
-        <div class="pull-left"><span>Sector: </span>{{alarm.fundamentalData.sector}}</div>
-        <div class="pull-left"><span>PE: </span>{{alarm.fundamentalData.pe}}</div>
-        <div class="pull-left"><span>Liquidity: </span>{{alarm.fundamentalData.liquidity}}</div>
+        <div class="pull-left"><span class="title">Symbol:</span><span class="value"> {{alarm.fundamentalData.symbol}}</span></div>
+        <div class="pull-left"><span class="title">Name:</span><span class="value"> {{alarm.fundamentalData.name}}</span></div>
+        <div class="pull-left"><span class="title">Industry:</span><span class="value"> {{alarm.fundamentalData.industry}}</span></div>
+        <div class="pull-left"><span class="title">Sector:</span><span class="value"> {{alarm.fundamentalData.sector}}</span></div>
+        <div class="pull-left"><span class="title">PE:</span><span class="value"> {{alarm.fundamentalData.pe}}</span></div>
+        <div class="pull-left"><span class="title">Liquidity:</span><span class="value"> {{alarm.fundamentalData.liquidity}}</span></div>
         <div class="clearfix"></div>
     </div>
 </div>
