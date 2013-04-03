@@ -68,10 +68,10 @@ class AlarmFilterOptionsHandler(webapp2.RequestHandler):
                 dates.append(curr)
             curr = curr - datetime.timedelta(days=1)
         
-        filters = { 'markets': ['NASDAQ', 'NYSE', 'LSA',
+        filters = { 'markets': ['NASDAQ', 'NYSE', 'LSE',
                                         'MLSE', 'HKEX', 'PAR'],
-                        'patterns': ['BOTTOM SQUARE TRIANGLE',
-                                        'TOP SQUARE TRIANGLE',
+                        'patterns': ['BOTTOM RIGHT TRIANGLE',
+                                        'TOP RIGHT TRIANGLE',
                                         'SUPPORT',
                                         'RESISTANCE',
                                         'BOTTOM END SWEEP',
