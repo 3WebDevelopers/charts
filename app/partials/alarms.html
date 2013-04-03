@@ -14,11 +14,11 @@
             <option value="" selected="selected">Select a pattern</option>
         </select>
 
-        <select ng-model="filters.date" ng-options="date | date:'mediumDate' for date in alarmFilterOptions.dates">
+        <select ng-model="filters.date" ng-options="date | date:'mediumDate' for date in filteredDates">
             <option value="" selected="selected">Select a date</option>
         </select>
 
-        <select ng-model="selectedAlarm" ng-options="alarm.symbol for alarm in filteredAlarms">
+        <select ng-model="selectedAlarm" ng-options="alarm.symbol for alarm in displayedAlarms">
             <option value="" selected="selected">Select an alarm</option>
         </select>
 

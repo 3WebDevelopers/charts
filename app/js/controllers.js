@@ -18,6 +18,8 @@ function AlarmCtrl($scope, $route, $routeParams, $location, $filter, Alarms, Ala
     $scope.filters = {interval: '', market: '', pattern: '', date: ''};
     $scope.selectedAlarm = '';
     $scope.filteredAlarms = [];
+    $scope.displayedAlarms = [];
+    $scope.filteredDates = [];
 
     $scope.$watch('selectedAlarm', function(newValue, oldValue) {
         if (newValue != oldValue && newValue){
@@ -56,28 +58,40 @@ function AlarmCtrl($scope, $route, $routeParams, $location, $filter, Alarms, Ala
   
     $scope.$watch('filters', function(newValue, oldValue) {
         if (newValue != oldValue && newValue){    
+            $scope.filteredAlarms = $filter('filter')($scope.alarms, 
+                                                                    {interval: $scope.filters.interval, 
+                                                                      market: $scope.filters.market, 
+                                                                      pattern: $scope.filters.pattern
+                                                                    });
+            $scope.filteredDates =  $scope.filteredAlarms.map(function(elem){
+                                                                                return elem.date;
+                                                                            }).filter(function(elem, pos, arr){
+                                                                                return arr.indexOf(elem) == pos;
+                                                                            });
+
             if ($scope.filters.interval && $scope.filters.market && 
                 $scope.filters.pattern && $scope.filters.date) {
-                $scope.filteredAlarms = $filter('filter')($scope.alarms, $scope.filters);
+                $scope.displayedAlarms = $filter('filter')($scope.filteredAlarms, 
+                                                                            {date: $scope.filters.date});
             } else {
-                $scope.filteredAlarms = [];
+                $scope.displayedAlarms = [];
             }
         }
     }, true);    
     
     $scope.next = function(){
-        if ($scope.filteredAlarms.length > 0){
-            var ind = $scope.filteredAlarms.indexOf($scope.selectedAlarm);
-            if (ind == $scope.filteredAlarms.length - 1) {ind = -1};
-            $scope.selectedAlarm = $scope.filteredAlarms[ind+1];
+        if ($scope.displayedAlarms.length > 0){
+            var ind = $scope.displayedAlarms.indexOf($scope.selectedAlarm);
+            if (ind == $scope.displayedAlarms.length - 1) {ind = -1};
+            $scope.selectedAlarm = $scope.displayedAlarms[ind+1];
         }
     }
     
     $scope.previous = function(){
-        if ($scope.filteredAlarms.length > 0){
-            var ind = $scope.filteredAlarms.indexOf($scope.selectedAlarm);
-            if (ind == 0 || ind == -1){ind = $scope.filteredAlarms.length}
-            $scope.selectedAlarm = $scope.filteredAlarms[ind-1];
+        if ($scope.displayedAlarms.length > 0){
+            var ind = $scope.displayedAlarms.indexOf($scope.selectedAlarm);
+            if (ind == 0 || ind == -1){ind = $scope.displayedAlarms.length}
+            $scope.selectedAlarm = $scope.displayedAlarms[ind-1];
         }
     }    
     

@@ -21,25 +21,8 @@ indexes:
 - kind: Alarm
   properties:
   - name: date
+    direction: desc
+  - name: interval
   - name: market
   - name: pattern
   - name: symbol
-
-- kind: Alarm
-  properties:
-  - name: date
-  - name: market
-  - name: symbol
-  - name: type
-
-- kind: Alarm
-  properties:
-  - name: date
-  - name: market
-  - name: type
-
-- kind: Product
-  properties:
-  - name: date
-  - name: market
-  - name: type
