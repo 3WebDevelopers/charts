@@ -61,6 +61,7 @@ class MainHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
             #Implements REST product handlers   
             webapp2.Route(r'/api/alarm_filter_options', handler=AlarmFilterOptionsHandler, name='alarm_filters'),
+            webapp2.Route(r'/api/market_data', handler=MarketDataHandler, name='market_data'),
             webapp2.Route(r'/api/alarms', handler=AlarmHandler, name='alarms'),
             webapp2.Route(r'/api/alarms/<key>', handler=AlarmHandler, name='alarm'),
             (r'/.*', MainHandler),

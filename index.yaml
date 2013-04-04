@@ -13,6 +13,7 @@ indexes:
 - kind: Alarm
   properties:
   - name: date
+    direction: desc
   - name: interval
   - name: market
   - name: pattern
@@ -20,9 +21,6 @@ indexes:
 
 - kind: Alarm
   properties:
-  - name: date
-    direction: desc
-  - name: interval
   - name: market
-  - name: pattern
   - name: symbol
+  - name: end

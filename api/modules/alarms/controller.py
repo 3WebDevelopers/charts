@@ -25,6 +25,8 @@ class AlarmHandler(webapp2.RequestHandler):
                                                                                 "%Y-%m-%dT%H:%M:%S.%fZ"),
                                 start = datetime.datetime.strptime(fundamental_data['start'],
                                                                                 "%Y-%m-%dT%H:%M:%S.%fZ"),
+                                end = datetime.datetime.strptime(fundamental_data['date'],
+                                                                                "%Y-%m-%dT%H:%M:%S.%fZ"),
                                 symbol = fundamental_data['symbol'],
                                 name = fundamental_data['name'],
                                 industry = fundamental_data['industry'],
@@ -81,4 +83,35 @@ class AlarmFilterOptionsHandler(webapp2.RequestHandler):
     def put(self):
         yield
 
+class MarketDataHandler(webapp2.RequestHandler):
+    def post(self):
+        data_points = json.loads(self.request.body)
+        # logging.info(j)
         
+        for data_point in data_points:
+            date = datetime.datetime.strptime(data_point['date'], "%Y-%m-%dT%H:%M:%S.%fZ")
+            market = data_point['market']
+            symbol = data_point['symbol']
+            query = Alarm.query(Alarm.end < date, 
+                                            Alarm.market == market,
+                                            Alarm.symbol == symbol)
+            count = query.count()
+
+            if (count > 0):
+                alarms = query.fetch(count)
+                for alarm in alarms:
+                    cd =  json.loads(alarm.chart_data)
+                    cd.append(data_point)
+                    alarm.chart_data = json.dumps(cd)
+                    alarm.end = date
+                    key = alarm.put()
+                logging.info(str(date)+","+market+","+symbol+","+str(count))
+            
+    def get(self):        
+        yield
+        
+    def delete(self):
+        yield
+
+    def put(self):
+        yield

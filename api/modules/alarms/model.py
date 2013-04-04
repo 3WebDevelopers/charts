@@ -6,6 +6,7 @@ class Alarm(ndb.Model):
     interval = ndb.StringProperty()
     date = ndb.DateTimeProperty()
     start = ndb.DateTimeProperty()
+    end = ndb.DateTimeProperty()
     symbol = ndb.StringProperty()
     name = ndb.StringProperty()
     industry = ndb.StringProperty()

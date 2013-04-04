@@ -16,21 +16,21 @@ var readline = require('readline');
 // options
 var logProgress = true;
 var logErrors = true;
-var sendData =  false;
+var sendData =  true;
 
 // server information
-var serverInfo = {host: "localhost", 
+var serverInfo = {host: "::1", 
                             port: "8080",
-                            path: '/api/alarms'};
+                            path: '/api/market_data'};
 
 // allowed data
 // name_in_folder : name_in_db
 var allowedMarkets = {
-    "BS_HKEX": "HKEX",
-    "BS_LSE": "LSE",
-    "BS_MLSE": "MLSE",
-    "BS_NASDAQ": "NASDAQ",
-    "BS_NYSE": "NYSE",
+    // "BS_HKEX": "HKEX",
+    // "BS_LSE": "LSE",
+    // "BS_MLSE": "MLSE",
+    // "BS_NASDAQ": "NASDAQ",
+    // "BS_NYSE": "NYSE",
     "BS_PAR": "PAR"
 }
 // END SETTINGS
@@ -145,11 +145,12 @@ rl.question("CONFIRM? Y/N\n", function(answer) {
 																		parseInt(dataPointsFileName.slice(4,6)),
 																		0, 0, 0, 0);
 																		
-												var dataPoints = dataPointsFile.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n");
-												
-												dataPoints.forEach(function(dataPoint){
-													if (dataPoint){
-                                                        var dataPointArray = dataPoint.split(" ");
+												var dataPointsString = dataPointsFile.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n");
+                                                var dataPoints = [];
+                                                
+												dataPointsString.forEach(function(dataPointString){
+													if (dataPointString){
+                                                        var dataPointArray = dataPointString.split(" ");
                                                         
                                                         if (logErrors){
                                                             if (dataPointArray.length != 6){
@@ -167,42 +168,44 @@ rl.question("CONFIRM? Y/N\n", function(answer) {
                                                             low: parseFloat(dataPointArray[3]), 
                                                             close: parseFloat(dataPointArray[4]), 
                                                             volume: parseFloat(dataPointArray[5])
-                                                        };												
+                                                        };	
                                                         
-                                                        if (sendData){
-                                                             // send json to server
-                                                            postData = JSON.stringify(dataPoint, null, 2);
-                                                            
-                                                            var options = {
-                                                                host: serverInfo.host,
-                                                                port: serverInfo.port,
-                                                                path: serverInfo.path,
-                                                                method: 'POST',
-                                                                headers: {
-                                                                    'Content-Type': 'application/x-www-form-urlencoded',
-                                                                    'Content-Length': postData.length
-                                                                }   
-                                                            };
-
-                                                            var req = http.request(options, function(res) {
-                                                                // console.log('STATUS: ' + res.statusCode);
-                                                                // console.log('HEADERS: ' + JSON.stringify(res.headers));
-                                                                // res.setEncoding('utf8');
-                                                                // res.on('data', function (chunk) {
-                                                                    // console.log('BODY: ' + chunk);
-                                                                // });
-                                                            });
-
-                                                            req.on('error', function(e) {
-                                                                console.log('problem with request: ' + e.message);
-                                                            });
-
-                                                            // write data to request body
-                                                            req.write(postData);
-                                                            req.end();
-                                                        }
+                                                        dataPoints.push(dataPoint);
                                                     }
 												});
+                                                
+                                                if (sendData){
+                                                     // send json to server
+                                                    postData = JSON.stringify(dataPoints, null, 2);
+                                                    
+                                                    var options = {
+                                                        host: serverInfo.host,
+                                                        port: serverInfo.port,
+                                                        path: serverInfo.path,
+                                                        method: 'POST',
+                                                        headers: {
+                                                            'Content-Type': 'application/x-www-form-urlencoded',
+                                                            'Content-Length': postData.length
+                                                        }   
+                                                    };
+
+                                                    var req = http.request(options, function(res) {
+                                                        // console.log('STATUS: ' + res.statusCode);
+                                                        // console.log('HEADERS: ' + JSON.stringify(res.headers));
+                                                        // res.setEncoding('utf8');
+                                                        // res.on('data', function (chunk) {
+                                                            // console.log('BODY: ' + chunk);
+                                                        // });
+                                                    });
+
+                                                    req.on('error', function(e) {
+                                                        console.log('problem with request: ' + e.message);
+                                                    });
+
+                                                    // write data to request body
+                                                    req.write(postData);
+                                                    req.end();
+                                                }                                                 
 											}
 										});
 									}
