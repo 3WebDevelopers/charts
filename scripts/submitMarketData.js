@@ -140,10 +140,10 @@ rl.question("CONFIRM? Y/N\n", function(answer) {
 													console.log('PROCESSING: ' + path.join('./', market, "DATA", dataPointsFileName));
 												}
 												
-												date = new Date(2000 + parseInt(dataPointsFileName.slice(0,2)),
+												date = new Date(Date.UTC(2000 + parseInt(dataPointsFileName.slice(0,2)),
 																		parseInt(dataPointsFileName.slice(2,4))-1,
 																		parseInt(dataPointsFileName.slice(4,6)),
-																		0, 0, 0, 0);
+																		0, 0, 0, 0));
 																		
 												var dataPointsString = dataPointsFile.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n");
                                                 var dataPoints = [];

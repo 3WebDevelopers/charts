@@ -162,10 +162,10 @@ rl.question("CONFIRM? Y/N\n", function(answer) {
 													market:allowedMarkets[market], 
 													pattern: allowedPatterns[alarmNameArray[1]],
                                                     interval: "Daily",
-													date: new Date(2000 + Number(alarmNameArray[2].slice(0,2)),
+													date: new Date(Date.UTC(2000 + Number(alarmNameArray[2].slice(0,2)),
 																		Number(alarmNameArray[2].slice(2,4))-1,
 																		Number(alarmNameArray[2].slice(4,6)),
-																		0, 0, 0, 0),
+																		0, 0, 0, 0)),
 													symbol: fundamentalDataArray[0], 
 													name: fundamentalDataArray[1], 
 													industry: fundamentalDataArray[2], 
@@ -192,10 +192,10 @@ rl.question("CONFIRM? Y/N\n", function(answer) {
 															if (line){    
 																var arr = line.split("_").slice(-1)[0].split(" ");
 																var candle = {
-																	date: new Date(2000 + Number(arr[0].slice(4,6)),
+																	date: new Date(Date.UTC(2000 + Number(arr[0].slice(4,6)),
 																			Number(arr[0].slice(2,4))-1,
 																			Number(arr[0].slice(0,2)),
-																			0, 0, 0, 0),
+																			0, 0, 0, 0)),
 																	open: Number(arr[1]),
 																	high: Number(arr[2]),
 																	low: Number(arr[3]),
